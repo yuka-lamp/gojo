@@ -13,14 +13,14 @@ $wp_url = get_template_directory_uri(); ?>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header class="header">
-  <nav class="header__wrap navbar navbar-light bg-light">
+  <nav class="header__wrap navbar navbar-light">
     <h1 class="header__wrap__logo navbar-brand" href="<?php echo $home ?>">
       <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
     </h1>
     <button class="header__wrap__hum navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="header__nav collapse navbar-collapse d-flex align-items-center" id="navbarNavDropdown">
+    <div class="header__nav collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="header__nav-inner navbar-nav p-4">
         <li class="header__nav-item nav-item">
           <a class="header__nav-link nav-link text-uppercase text-body" href="<?php echo $home ?>">top</a>
@@ -64,9 +64,11 @@ $wp_url = get_template_directory_uri(); ?>
 <?php if (is_front_page()): ?>
 
 <section class="mv">
-  <div class="mv__content">
-    <img src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
-    <p class="mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
+  <div class="mv__bg w-100">
+    <div class="mv__content">
+      <img class="d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+      <p class="mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
+    </div>
   </div>
 </section>
 
