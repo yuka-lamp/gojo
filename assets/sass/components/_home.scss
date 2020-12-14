@@ -1,0 +1,82 @@
+.top {
+  &__about {
+    position: relative;
+    @include media-breakpoint-down(md) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &-ttl {
+      font-size: 1.625rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    &-txt {
+      width: 75%;
+      @include media-breakpoint-down(md) {
+        width: 100%!important;
+      }
+    }
+  }
+
+  &__links {
+    &__wrap {
+      z-index: -2;
+    }
+
+    &__store {
+      .top__link-item {
+        background: url("../images/store_bg.png");
+        background-size: cover;
+      }
+    }
+
+    &-item {
+      width: 50%;
+      transition: 0.5s;
+      object-fit: cover;
+      position: relative;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      a {
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(1) {
+        background: url("../images/link_bg_1.png");
+        background-size: cover;
+      }
+
+      &:nth-child(2) {
+        background: url("../images/link_bg_2.png");
+        background-size: cover;
+      }
+
+      &:nth-child(3) {
+        background: url("../images/link_bg_3.png");
+        background-size: cover;
+      }
+
+      &:nth-child(4) {
+        background: url("../images/link_bg_4.png");
+        background-size: cover;
+      }
+
+      &:hover {
+        // border: 7px solid $secondary;
+      }
+    }
+  }
+  &__relation {
+    &-img {
+      border: 5px solid $success;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

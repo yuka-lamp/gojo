@@ -6,6 +6,7 @@ $wp_url = get_template_directory_uri(); ?>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 <?php wp_head(); ?>
 </head>
 
@@ -19,8 +20,8 @@ $wp_url = get_template_directory_uri(); ?>
     <button class="header__wrap__hum navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="header__nav collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="header__nav-inner navbar-nav">
+    <div class="header__nav collapse navbar-collapse d-flex align-items-center" id="navbarNavDropdown">
+      <ul class="header__nav-inner navbar-nav p-4">
         <li class="header__nav-item nav-item">
           <a class="header__nav-link nav-link text-uppercase text-body" href="<?php echo $home ?>">top</a>
         </li>
@@ -70,7 +71,7 @@ $wp_url = get_template_directory_uri(); ?>
 </section>
 
 <section class="info bg-success py-4">
-  <div class="row">
+  <div class="row w-100">
     <div class="col-sm-4">
       <p class="text-uppercase font-weight-bold m-0">Information</p>
     </div>

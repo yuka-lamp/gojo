@@ -1,0 +1,18 @@
+.blog {
+  &__item {
+    &__txt {
+      &-info {
+        color: $info;
+
+        padding-right: 1rem;
+        a {
+          color: $info;
+          border-left: 1px solid $info;
+          border-right: 1px solid $info;
+          margin-right: 1rem;
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}

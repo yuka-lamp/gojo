@@ -4,54 +4,71 @@ $wp_url = get_template_directory_uri(); ?>
 
 </main>
 
-<footer class="py-5">
-<div class="container">
-<div class="row">
-<div class="col-12 col-md">
-<span>LOGO</span>
-<small class="d-block mb-3 text-muted">©2020</small>
-</div>
-<div class="col-6 col-md">
-<h5>Features</h5>
-<ul class="list-unstyled text-small">
-<li><a class="text-muted" href="#">Cool stuff</a></li>
-<li><a class="text-muted" href="#">Random feature</a></li>
-<li><a class="text-muted" href="#">Team feature</a></li>
-<li><a class="text-muted" href="#">Stuff for developers</a></li>
-<li><a class="text-muted" href="#">Another one</a></li>
-<li><a class="text-muted" href="#">Last time</a></li>
-</ul>
-</div>
-<div class="col-6 col-md">
-<h5>Resources</h5>
-<ul class="list-unstyled text-small">
-<li><a class="text-muted" href="#">Resource</a></li>
-<li><a class="text-muted" href="#">Resource name</a></li>
-<li><a class="text-muted" href="#">Another resource</a></li>
-<li><a class="text-muted" href="#">Final resource</a></li>
-</ul>
-</div>
-<div class="col-6 col-md">
-<h5>Resources</h5>
-<ul class="list-unstyled text-small">
-<li><a class="text-muted" href="#">Business</a></li>
-<li><a class="text-muted" href="#">Education</a></li>
-<li><a class="text-muted" href="#">Government</a></li>
-<li><a class="text-muted" href="#">Gaming</a></li>
-</ul>
-</div>
-<div class="col-6 col-md">
-<h5>About</h5>
-<ul class="list-unstyled text-small">
-<li><a class="text-muted" href="#">Team</a></li>
-<li><a class="text-muted" href="#">Locations</a></li>
-<li><a class="text-muted" href="#">Privacy</a></li>
-<li><a class="text-muted" href="#">Terms</a></li>
-</ul>
-</div>
-</div>
-</div>
+<footer class="footer pt-5">
+  <div class="footer__contact position-relative">
+    <div class="footer__contact__bg"></div>
+    <div class="footer__contact__inner bg-primary p-5">
+      <div class="row align-items-center">
+        <h2 class="m-0 col-sm-3 text-white">Contact</h2>
+        <p class="m-0 col-sm-6 text-white">当グループへのご質問、ご要望は電話またはメールにて<br>お気軽にお問い合わせください。</p>
+        <div class="footer__contact-arrow col-sm-3"><img src="<?php echo $wp_url ?>/dist/images/footer_arrow.png" alt="矢印" srcset="<?php echo $wp_url ?>/dist/images/footer_arrow.png 1x, <?php echo $wp_url ?>/dist/images/footer_arrow@2x.png 2x"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__main bg-success pb-5">
+    <div class="d-md-flex justify-content-between align-items-end">
+      <div class="footer__main__info">
+        <h3 class="footer__main__info-name">五條市地域商社</h3>
+        <p class="m-0">〒637-0417　奈良県五條市大塔町阪本225-6
+          <br>TEL：<a href="tel:0747-35-0311">0747-35-0311</a>
+        </p>
+      </div>
+      <div class="">
+        <ul class="list-unstyled">
+          <li class="d-inline">
+            <a class="text-uppercase text-body" href="<?php echo $home ?>">top</a>
+          </li>
+          <li class="d-inline ml-4">
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/concept/">concept</a>
+          </li>
+          <li class="d-inline ml-4">
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/service/">service</a>
+          </li>
+          <li class="d-inline ml-4">
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
+          </li>
+          <li class="d-inline ml-4">
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/tour/">tour</a>
+          </li>
+          <li class="d-inline ml-4">
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-md-flex justify-content-between align-items-end mt-5">
+      <ul class="list-unstyled">
+        <li class="d-inline">
+          <a class="small text-info" href="<?php echo $home ?>/contact/">お問い合わせ</a>
+        </li>
+        <li class="d-inline">
+          <a class="small text-info" href="<?php echo $home ?>/tarm/">利用規約</a>
+        </li>
+        <li class="d-inline">
+          <a class="small text-info" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
+        </li>
+      </ul>
+      <p class="text-info small">Copyright© 2020 五條市地域商社 All Rights Reserved.</p>
+    </div>
+  </div>
 </footer>
+
+<script type="text/javascript">
+$('[data-toggle="slide-collapse"]').on('click', function() {
+  $navMenuCont = $($(this).data('target'));
+  $navMenuCont.animate({'width':'toggle'}, 350);
+});
+</script>
 
 <?php wp_footer(); ?>
 </body>

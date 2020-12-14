@@ -1,0 +1,46 @@
+.header {
+  // PC時のみ
+  @include media-breakpoint-up(md) {
+    width: 63px;
+    height: 100vh;
+    border-right: 1px solid $info;
+    position: fixed;
+    background: $white;
+    z-index: 2;
+  }
+
+  &__nav {
+    @include media-breakpoint-up(md) {
+      position: fixed;
+      top: 0;
+      left: 63px;
+      z-index: 1;
+      width: 375px;
+      height: 100vh;
+      background: $white;
+      z-index: 2;
+    }
+
+    &:after {
+      @include media-breakpoint-up(md) {
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(366, 366, 366, .5);
+      }
+    }
+
+    &-link {
+      font-size: 1.625rem;
+      font-weight: bold;
+    }
+
+    &__sub {
+      &-link {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+}

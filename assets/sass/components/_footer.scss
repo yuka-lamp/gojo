@@ -1,0 +1,34 @@
+.footer {
+  &__contact {
+    &__bg {
+      background: url("../images/footer_bg.png");
+      width: 100%;
+      height: 374px;
+    }
+    &__inner {
+      position: absolute;
+      right: 0;
+      bottom: -5rem;
+      width: 60%;
+      @include media-breakpoint-down(md) {
+        width: 90%;
+      }
+    }
+  }
+
+  &__main {
+    padding-top: 8rem;
+    padding: 8rem 3rem 5rem 3rem;
+    @include media-breakpoint-down(md) {
+      padding: 8rem 15px 5rem 15px;
+    }
+
+    &__info {
+      &-name {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
