@@ -25,6 +25,19 @@
           margin-bottom: 1rem!important;
         }
       }
+
+      .footer__contact-arrow {
+        position: relative;
+        left: 0;
+        transition: .3s;
+      }
+
+      &:hover {
+        .footer__contact-arrow {
+          position: relative;
+          left: 2rem;
+        }
+      }
     }
   }
 

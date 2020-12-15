@@ -4,16 +4,18 @@ import '../sass/app.scss';
 // JSインポート
 import 'bootstrap';
 import "slick-carousel";
+import "jquery-drawer";
 
-$(function ($) {
+require('./drawer');
+
+$(function () {
   // slick
-  // $(".slick-blog").slick();
-
   $(".slick-blog").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    centerMode: true,
     speed: 2000,
     arrows: true,
     dots: true,
@@ -23,7 +25,7 @@ $(function ($) {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

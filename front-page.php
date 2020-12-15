@@ -75,6 +75,8 @@ get_header(); ?>
       </div>
       <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
     </div>
+  </div>
+  <div class="container">
     <div class="slick-blog blog__wrap">
       <?php
       $args = [
@@ -106,7 +108,9 @@ get_header(); ?>
       </div>
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
-    <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
+    <div class="text-center">
+      <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
+    </div>
   </div>
 </section>
 

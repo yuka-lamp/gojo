@@ -10,52 +10,51 @@ $wp_url = get_template_directory_uri(); ?>
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="drawer drawer--left">
 <?php wp_body_open(); ?>
 <header class="header">
-  <nav class="header__wrap navbar navbar-light">
-    <h1 class="header__wrap__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
-      <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
-      <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
-    </h1>
-    <button class="header__wrap__hum navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="header__nav collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="header__nav-inner navbar-nav p-4">
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-body" href="<?php echo $home ?>">top</a>
-        </li>
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-primary" href="<?php echo $home ?>/concept/">concept</a>
-        </li>
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-primary" href="<?php echo $home ?>/service/">service</a>
-        </li>
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
-        </li>
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-primary" href="<?php echo $home ?>/tour/">tour</a>
-        </li>
-        <li class="header__nav-item nav-item">
-          <a class="header__nav-link nav-link text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
-        </li>
-        <li class="header__nav-link nav-item">
-          <ul class="list-unstyled">
-            <li class="header__nav__sub-item nav-item">
-              <a class="header__nav__sub-link nav-link small text-gray" href="<?php echo $home ?>/contact/">お問い合わせ</a>
-            </li>
-            <li class="header__nav-item nav-item">
-              <a class="header__nav__sub-link nav-link small text-gray" href="<?php echo $home ?>/tarm/">利用規約</a>
-            </li>
-            <li class="header__nav-item nav-item">
-              <a class="header__nav__sub-link nav-link small text-gray" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <h1 class="header__wrap__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
+    <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
+    <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
+  </h1>
+  <button type="button" class="drawer-toggle drawer-hamburger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="drawer-hamburger-icon"></span>
+  </button>
+  <nav class="header__nav drawer-nav" role="navigation" style="left: -375px">
+    <ul class="header__nav-inner drawer-menu pl-5 pr-5">
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link text-uppercase text-body" href="<?php echo $home ?>">top</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/concept/">concept</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/service/">service</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/tour/">tour</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
+      </li>
+      <li class="header__nav-link header__nav__sub">
+        <ul class="list-unstyled">
+          <li class="header__nav__sub-item">
+            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/contact/">お問い合わせ</a>
+          </li>
+          <li class="header__nav__sub-item">
+            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/tarm/">利用規約</a>
+          </li>
+          <li class="header__nav__sub-item">
+            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </header>
 <!-- /header -->
@@ -73,7 +72,7 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
 </section>
 
-<section class="top__info bg-success py-4">
+<section class="top__info bg-success py-4 mb-5">
   <div class="top__info__inner row">
     <div class="col-sm-4">
       <p class="top__info-ttl text-uppercase">Information</p>
