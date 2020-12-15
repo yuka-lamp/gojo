@@ -14,8 +14,9 @@ $wp_url = get_template_directory_uri(); ?>
 <?php wp_body_open(); ?>
 <header class="header">
   <nav class="header__wrap navbar navbar-light">
-    <h1 class="header__wrap__logo navbar-brand" href="<?php echo $home ?>">
+    <h1 class="header__wrap__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
       <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
+      <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
     </h1>
     <button class="header__wrap__hum navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -63,21 +64,21 @@ $wp_url = get_template_directory_uri(); ?>
 
 <?php if (is_front_page()): ?>
 
-<section class="mv">
-  <div class="mv__bg w-100">
-    <div class="mv__content">
-      <img class="d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
-      <p class="mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
+<section class="top__mv">
+  <div class="top__mv__bg w-100">
+    <div class="top__mv__content">
+      <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+      <p class="top__mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
     </div>
   </div>
 </section>
 
-<section class="info bg-success py-4">
-  <div class="row w-100">
+<section class="top__info bg-success py-4">
+  <div class="top__info__inner row">
     <div class="col-sm-4">
-      <p class="text-uppercase font-weight-bold m-0">Information</p>
+      <p class="top__info-ttl text-uppercase">Information</p>
     </div>
-    <a class="col-sm-8 text-secondary text-decoladion_underline" href="#"><span class="mr-5">2020.01.01</span>お知らせの内容が入ります。</a>
+    <a class="col-sm-8 text-secondary text-decoladion_underline" href="#"><span class="top__info-day text-primary">2020.01.01</span>お知らせの内容が入ります。</a>
   </div>
 </section>
 

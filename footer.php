@@ -63,13 +63,6 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
 </footer>
 
-<script type="text/javascript">
-$('[data-toggle="slide-collapse"]').on('click', function() {
-  $navMenuCont = $($(this).data('target'));
-  $navMenuCont.animate({'width':'toggle'}, 350);
-});
-</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>

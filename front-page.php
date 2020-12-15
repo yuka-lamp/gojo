@@ -75,10 +75,10 @@ get_header(); ?>
       </div>
       <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
     </div>
-    <div class="blog__wrap row">
+    <div class="slick-blog blog__wrap">
       <?php
       $args = [
-          'posts_per_page' => 3,
+          'posts_per_page' => 6,
           'post_type' => 'blog',
           'orderby' => 'date',
           'order' => 'ASC',
@@ -93,7 +93,7 @@ get_header(); ?>
       $date = get_the_date();
       $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
       ?>
-      <div class="blog__item col-sm-4">
+      <div class="blog__item">
         <div class="blog__item__img">
           <a class="d-block" hraf="<?php echo $permalink ?>">
             <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
@@ -105,14 +105,14 @@ get_header(); ?>
         </div>
       </div>
       <?php endforeach; wp_reset_postdata(); ?>
-      <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
     </div>
+    <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
   </div>
 </section>
 
 <section class="top__relation py-5">
   <div class="container">
-    <div class="row">
+    <div class="row pl-5 pr-5">
       <div class="col-sm-4">
         <a class="d-block text-center" href="#" target="_blank">
           <div class="top__relation-img">
