@@ -7,13 +7,13 @@ $wp_url = get_template_directory_uri(); ?>
 <footer class="footer pt-5">
   <div class="footer__contact position-relative">
     <div class="footer__contact__bg"></div>
-    <div class="footer__contact__inner bg-primary p-5">
+    <!-- <div class="footer__contact__inner bg-primary p-5">
       <div class="row align-items-center">
         <h2 class="m-0 col-sm-3 text-white">Contact</h2>
-        <p class="m-0 col-sm-6 text-white">当グループへのご質問、ご要望は電話またはメールにて<br>お気軽にお問い合わせください。</p>
+        <p class="m-0 col-sm-6 text-white">当グループへのご質問、ご要望は電話またはメールにて<br class="d-none d-md-block">お気軽にお問い合わせください。</p>
         <div class="footer__contact-arrow col-sm-3"><img src="<?php echo $wp_url ?>/dist/images/footer_arrow.png" alt="矢印" srcset="<?php echo $wp_url ?>/dist/images/footer_arrow.png 1x, <?php echo $wp_url ?>/dist/images/footer_arrow@2x.png 2x"></div>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="footer__main bg-success pb-5">
     <div class="d-md-flex justify-content-between align-items-end">

@@ -17,7 +17,7 @@ $wp_url = get_template_directory_uri(); ?>
     <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
     <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
   </h1>
-  <button type="button" class="drawer-toggle drawer-hamburger">
+  <!-- <button type="button" class="drawer-toggle drawer-hamburger">
     <span class="sr-only">toggle navigation</span>
     <span class="drawer-hamburger-icon"></span>
   </button>
@@ -55,7 +55,7 @@ $wp_url = get_template_directory_uri(); ?>
         </ul>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 </header>
 <!-- /header -->
 
@@ -73,12 +73,29 @@ $wp_url = get_template_directory_uri(); ?>
 </section>
 
 <section class="top__info bg-success py-4 mb-5">
+  <?php
+    $args = [
+        'posts_per_page' => 6,
+        'post_type' => 'post',
+        'orderby' => 'date',
+        'order' => 'ASC',
+    ];
+    $my_posts = get_posts($args);
+    foreach ($my_posts as $post):
+    setup_postdata($post);
+    $id = get_the_ID();
+    $ttl = get_the_title();
+    $permalink = get_the_permalink();
+    $date = get_the_date();
+    ?>
   <div class="top__info__inner row">
     <div class="col-sm-4">
       <p class="top__info-ttl text-uppercase">Information</p>
     </div>
-    <a class="col-sm-8 text-secondary text-decoladion_underline" href="#"><span class="top__info-day text-primary">2020.01.01</span>お知らせの内容が入ります。</a>
+    <p class="col-sm-8 text-secondary text-decoladion_underline m-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></p>
+    <!-- <a class="col-sm-8 text-secondary text-decoladion_underline" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a> -->
   </div>
+  <?php endforeach; wp_reset_postdata(); ?>
 </section>
 
 <?php else:?>

@@ -119,50 +119,85 @@
       z-index: -2;
     }
 
-    &__store {
-      .top__link-item {
-        background: url("../images/store_bg.png");
-        background-size: cover;
-      }
-    }
-
     &-item {
+      position: relative;
       width: 50%;
       transition: 0.5s;
       object-fit: cover;
-      position: relative;
+      overflow: hidden;
       @include media-breakpoint-down(md) {
         width: 100%;
       }
 
-      a {
-        &:hover {
-          opacity: 1;
-        }
-      }
-
-      &:nth-child(1) {
-        background: url("../images/link_bg_1.png");
-        background-size: cover;
-      }
-
-      &:nth-child(2) {
-        background: url("../images/link_bg_2.png");
-        background-size: cover;
-      }
-
-      &:nth-child(3) {
-        background: url("../images/link_bg_3.png");
-        background-size: cover;
-      }
-
-      &:nth-child(4) {
-        background: url("../images/link_bg_4.png");
-        background-size: cover;
+      .ttl2 {
+        letter-spacing: 0.2rem;
       }
 
       &:hover {
-        // border: 7px solid $secondary;
+        &:after {
+          transform: scale(1.1);
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: .3s;
+      }
+
+      &:nth-child(1) {
+        &:after {
+          background: url("../images/link_bg_1.png");
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(2) {
+        &:after {
+          background: url("../images/link_bg_2.png");
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(3) {
+        &:after {
+          background: url("../images/link_bg_3.png");
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(4) {
+        &:after {
+          background: url("../images/link_bg_4.png");
+          background-size: cover;
+        }
+      }
+    }
+
+    a {
+      padding: 3rem 0;
+
+      &:hover {
+        opacity: 1;
+
+        .top__links-item {
+          &:after {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &__store {
+      .top__links-item {
+        &:after {
+          background: url("../images/store_bg.png");
+          background-size: cover;
+        }
       }
     }
   }
@@ -196,6 +231,9 @@
       li {
         display: inline-block;
         margin: 0 15px;
+        @include media-breakpoint-down(md) {
+          margin: 0 3px;
+        }
 
         button {
           position: relative;

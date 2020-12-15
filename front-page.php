@@ -6,7 +6,7 @@ get_header(); ?>
 <section class="top__about py-5">
   <div class="container">
   <h2 class="top__about-ttl">「ものづくり」で地域社会へ貢献を</h2>
-  <p class="text-secondary font-weight-bold mt-4 mb-5">Contributing to the local community<br>through “manufacturing”</p>
+  <p class="text-secondary font-weight-bold mt-4 mb-5">Contributing <br class="d-block d-md-none">to the local community<br>through “manufacturing”</p>
   <div class="text-right">
     <p class="top__about-txt d-inline-block text-left lh-l">当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流資源を通じ、次世代のアグリカルチャーとエコツーリズムを目指した「ものづくり」「ひとづくり」「まちづくり」に挑戦し、全国の各地域と連携協働しながら、活力ある「ローカルブランド」を総合的にプロデュースしてまいりたい考えております。<br>当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流</p>
   </div>
@@ -14,52 +14,56 @@ get_header(); ?>
 </section>
 
 <section class="top__links py-5">
-  <div class="row bg-primary w-100 m-0">
-    <div class="top__links-item py-5 pl-0 pr-0">
-      <a class="d-block text-center" href="#">
+  <div class="row w-100 m-0">
+    <div class="top__links-item pl-0 pr-0">
+      <a class="d-block text-center">
         <h2 class="ttl2 text-white">Service</h2>
         <p class="text-white mt-3">事業紹介</p>
         <div class="mt-4 text-center">
-        <p class="btn btn-primary">詳しくはこちら</p>
+        <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
+        <p class="btn btn-primary">Coming soon</p>
         </div>
       </a>
     </div>
-    <div class="top__links-item py-5 pl-0 pr-0">
-      <a class="d-block text-center" href="#">
+    <div class="top__links-item pl-0 pr-0">
+      <a class="d-block text-center">
         <h2 class="ttl2 text-white">Company</h2>
         <p class="text-white mt-3">会社概要</p>
         <div class="mt-4 text-center">
-        <p class="btn btn-primary">詳しくはこちら</p>
+          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
+          <p class="btn btn-primary">Coming soon</p>
         </div>
       </a>
     </div>
-    <div class="top__links-item py-5 pl-0 pr-0">
-      <a class="d-block text-center" href="#">
+    <div class="top__links-item pl-0 pr-0">
+      <a class="d-block text-center">
         <h2 class="ttl2 text-white">Tour</h2>
         <p class="text-white mt-3">ツアー販売</p>
         <div class="mt-4 text-center">
-        <p class="btn btn-primary">詳しくはこちら</p>
+          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
+          <p class="btn btn-primary">Coming soon</p>
         </div>
       </a>
     </div>
-    <div class="top__links-item py-5 pl-0 pr-0">
-      <a class="d-block text-center" href="#">
+    <div class="top__links-item pl-0 pr-0">
+      <a class="d-block text-center">
         <h2 class="ttl2 text-white">Product</h2>
         <p class="text-white mt-3">認証商品</p>
         <div class="mt-4 text-center">
-        <p class="btn btn-primary">詳しくはこちら</p>
+          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
+          <p class="btn btn-primary">Coming soon</p>
         </div>
       </a>
     </div>
   </div>
   <div class="top__links__store container mt-5">
-    <div class="bg-primary">
-      <div class="top__links-item w-100 py-5">
+    <div class="">
+      <div class="top__links-item w-100">
         <a class="d-block text-center" href="http://ootou-gojo-shop.com/" target="_blank">
-          <h2 class="ttl2 text-white">product</h2>
+          <h2 class="ttl2 text-white">Store</h2>
           <p class="text-white mt-3">認証商品</p>
           <div class="mt-4 text-center">
-          <p class="btn btn-primary">詳しくはこちら</p>
+            <p class="btn btn-primary">詳しくはこちら</p>
           </div>
         </a>
       </div>
@@ -73,7 +77,7 @@ get_header(); ?>
       <div class="main-ttl">
         <h2 class="text-secondary font-weight-bold">Gojo blog<span class="text-primary">五條市ブログ</span></h2>
       </div>
-      <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
+      <!-- <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a> -->
     </div>
   </div>
   <div class="container">
