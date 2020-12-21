@@ -13,7 +13,7 @@ $wp_url = get_template_directory_uri(); ?>
 <body class="drawer drawer--left">
 <?php wp_body_open(); ?>
 <header class="header">
-  <h1 class="header__wrap__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
+  <h1 class="header__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
     <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社のロゴ">
     <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
   </h1>
@@ -57,6 +57,12 @@ $wp_url = get_template_directory_uri(); ?>
     </ul>
   </nav> -->
 </header>
+<div class="header__booking bg-primary">
+  <a class="header__booking-inner" href="#">
+    <img class="mr-2" style="width: 17.4px; height: 17.4px;"src="<?php echo $wp_url ?>/dist/images/icon_booking.svg" alt="予約アイコン">
+    <p class="header__booking-text text-white font-weight-bold m-0 d-inlineß">BOOKING</p>
+  </a>
+</div>
 <!-- /header -->
 
 <main>
@@ -64,11 +70,12 @@ $wp_url = get_template_directory_uri(); ?>
 <?php if (is_front_page()): ?>
 
 <section class="top__mv">
-  <div class="top__mv__bg w-100">
-    <div class="top__mv__content">
-      <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
-      <p class="top__mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
-    </div>
+  <div class="w-100">
+    <div id="mainvisual" class="top__mv__bg"></div>
+      <div class="top__mv__content">
+        <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+        <p class="top__mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
+      </div>
   </div>
 </section>
 

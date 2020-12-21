@@ -4,10 +4,19 @@
   }
 
   &__contact {
+    // 本公開まで
+    // &__bg {
+    //   background: url("../images/footer_bg.png");
+    // background-size: cover;
+    //   width: 100%;
+    //   height: 374px;
+    // }
+
     &__bg {
       background: url("../images/footer_bg.png");
+      background-size: cover;
       width: 100%;
-      height: 374px;
+      height: 254px
     }
 
     &__inner {
@@ -29,7 +38,7 @@
       .footer__contact-arrow {
         position: relative;
         left: 0;
-        transition: .3s;
+        transition: 0.3s;
       }
 
       &:hover {
@@ -40,11 +49,16 @@
       }
     }
   }
-
+  // 本公開まで
+  // &__main {
+  //   padding: 8rem 3rem 4rem;
+  //   @include media-breakpoint-down(md) {
+  //     padding: 8rem 15px 5rem;
+  //   }
   &__main {
-    padding: 8rem 3rem 5rem;
+    padding: 4rem 3rem 4rem;
     @include media-breakpoint-down(md) {
-      padding: 8rem 15px 5rem;
+      padding: 3rem 15px 5rem;
     }
 
     ul {

@@ -5,8 +5,10 @@ import '../sass/app.scss';
 import 'bootstrap';
 import "slick-carousel";
 import "jquery-drawer";
+// import "vegas";
 
-require('./drawer');
+// require('./drawer');
+// require('./vegas');
 
 $(function () {
   // slick

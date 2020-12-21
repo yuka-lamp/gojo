@@ -1,5 +1,4 @@
 .header {
-  // PC時のみ
   position: fixed;
   top: 0;
   left: 0;
@@ -11,14 +10,42 @@
     height: 100vh;
     border-right: 1px solid $info;
   }
-
-  &__wrap__logo {
+  // header__logo
+  &__logo {
     position: fixed;
     top: 9px;
     left: 9px;
     z-index: 3;
   }
+  // header__booking
+  &__booking {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    @include media-breakpoint-up(md) {
+      transform: rotate(-90deg);
+      left: -49px;
+      bottom: 48px;
+    }
 
+    &-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 180px;
+      height: 63px;
+      @include media-breakpoint-up(md) {
+        width: 160px;
+      }
+    }
+
+    &-text {
+      font-size: 1rem;
+    }
+  }
+  // header__nav
   &__nav {
     position: relative;
     width: 375px;

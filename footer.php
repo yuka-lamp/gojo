@@ -15,7 +15,7 @@ $wp_url = get_template_directory_uri(); ?>
       </div>
     </div> -->
   </div>
-  <div class="footer__main bg-success pb-5">
+  <div class="footer__main bg-success">
     <div class="d-md-flex justify-content-between align-items-end">
       <div class="footer__main__info">
         <h3 class="footer__main__info-name">五條市地域商社</h3>
@@ -24,7 +24,7 @@ $wp_url = get_template_directory_uri(); ?>
         </p>
       </div>
       <div class="">
-        <ul class="list-unstyled">
+        <!-- <ul class="list-unstyled">
           <li class="d-inline">
             <a class="text-uppercase text-body" href="<?php echo $home ?>">top</a>
           </li>
@@ -43,11 +43,11 @@ $wp_url = get_template_directory_uri(); ?>
           <li class="d-inline ml-4">
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
     <div class="d-md-flex justify-content-between align-items-end mt-5">
-      <ul class="list-unstyled">
+      <!-- <ul class="list-unstyled">
         <li class="d-inline">
           <a class="small text-info" href="<?php echo $home ?>/contact/">お問い合わせ</a>
         </li>
@@ -57,8 +57,8 @@ $wp_url = get_template_directory_uri(); ?>
         <li class="d-inline">
           <a class="small text-info" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
         </li>
-      </ul>
-      <p class="text-info small">Copyright© 2020 五條市地域商社 All Rights Reserved.</p>
+      </ul> -->
+      <p class="text-info small m-0">Copyright© 2020 五條市地域商社 All Rights Reserved.</p>
     </div>
   </div>
 </footer>
