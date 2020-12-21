@@ -8,7 +8,7 @@ get_header(); ?>
   <h2 class="top__about-ttl">地域を繋ぐ<br>プラットフォームに</h2>
   <p class="text-secondary font-weight-bold mt-4 mb-5">For a platform  <br class="d-block d-md-none">that connects regions</p>
   <div class="text-right">
-    <p class="top__about-txt d-inline-block text-left lh-l">当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流資源を通じ、次世代のアグリカルチャーとエコツーリズムを目指した「ものづくり」「ひとづくり」「まちづくり」に挑戦し、全国の各地域と連携協働しながら、活力ある「ローカルブランド」を総合的にプロデュースしてまいりたい考えております。<br>当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流</p>
+    <p class="top__about-txt d-inline-block text-left lh-l">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
   </div>
   </div>
 </section>
