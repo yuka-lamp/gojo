@@ -14,17 +14,14 @@ module.exports = (env, argv) => ({
     minimizer: [new TerserPlugin({}), new OptimizeCssAssetsPlugin({})],
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-env"],
-            },
+        use: [{
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
           },
-        ],
+        }, ],
         exclude: /node_modules/,
       },
       {

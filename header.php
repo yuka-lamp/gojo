@@ -18,7 +18,7 @@ $wp_url = get_template_directory_uri(); ?>
     <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社</p>
   </h1>
   <!-- <button type="button" class="drawer-toggle drawer-hamburger">
-    <span class="sr-only">toggle navigation</span>
+    <span class="sr-only">toggle mainvisual</span>
     <span class="drawer-hamburger-icon"></span>
   </button>
   <nav class="header__nav drawer-nav" role="navigation" style="left: -375px">
@@ -70,13 +70,15 @@ $wp_url = get_template_directory_uri(); ?>
 <?php if (is_front_page()): ?>
 
 <section class="top__mv">
-  <div class="w-100">
-    <div id="mainvisual" class="top__mv__bg"></div>
-      <div class="top__mv__content">
-        <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
-        <p class="top__mv__content-ttl text-uppercase font-weight-bold">FARMERS<br>FOREST<br>GROUP</p>
-      </div>
-  </div>
+    <div class="top__mv__bg">
+      <div class="top__mv__bg-item d-block num-01"></div>
+      <div class="top__mv__bg-item d-block num-02"></div>
+      <div class="top__mv__bg-item d-block num-03"></div>
+    </div>
+    <div class="top__mv__content">
+      <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+      <p class="top__mv__content-ttl text-uppercase font-weight-bold">GOJO Local<br>Trading <br>Company</p>
+    </div>
 </section>
 
 <section class="top__info bg-success py-4 mb-5">

@@ -5,8 +5,8 @@ get_header(); ?>
 
 <section class="top__about py-5">
   <div class="container">
-  <h2 class="top__about-ttl">「ものづくり」で地域社会へ貢献を</h2>
-  <p class="text-secondary font-weight-bold mt-4 mb-5">Contributing <br class="d-block d-md-none">to the local community<br>through “manufacturing”</p>
+  <h2 class="top__about-ttl">地域を繋ぐ<br>プラットフォームに</h2>
+  <p class="text-secondary font-weight-bold mt-4 mb-5">For a platform  <br class="d-block d-md-none">that connects regions</p>
   <div class="text-right">
     <p class="top__about-txt d-inline-block text-left lh-l">当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流資源を通じ、次世代のアグリカルチャーとエコツーリズムを目指した「ものづくり」「ひとづくり」「まちづくり」に挑戦し、全国の各地域と連携協働しながら、活力ある「ローカルブランド」を総合的にプロデュースしてまいりたい考えております。<br>当社「ファーマーズ・フォレスト」は、ろまんちっく村をはじめとする交流</p>
   </div>
