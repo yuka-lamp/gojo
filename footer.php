@@ -18,7 +18,7 @@ $wp_url = get_template_directory_uri(); ?>
   <div class="footer__main bg-success">
     <div class="d-md-flex justify-content-between align-items-end">
       <div class="footer__main__info">
-        <h3 class="footer__main__info-name">五條市地域商社</h3>
+        <h3 class="footer__main__info-name">五條市地域商社株式会社</h3>
         <p class="m-0">〒637-0417　奈良県五條市大塔町阪本225-6
           <br>TEL：<a href="tel:0747-35-0311">0747-35-0311</a>
         </p>
@@ -58,7 +58,7 @@ $wp_url = get_template_directory_uri(); ?>
           <a class="small text-info" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
         </li>
       </ul> -->
-      <p class="text-info small m-0">Copyright© 2020 五條市地域商社 All Rights Reserved.</p>
+      <p class="text-info small m-0">Copyright© 2020 五條市地域商社株式会社 All Rights Reserved.</p>
     </div>
   </div>
 </footer>

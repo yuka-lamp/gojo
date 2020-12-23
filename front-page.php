@@ -3,6 +3,10 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
+<div class="text-center pl-5 pr-5 mb-4">
+  <a class="border border-success py-3 d-block text-center text-decoration-underline text-secondary" href="<?php echo $wp_url ?>/dist/images/coupon.pdf" target="_blank">五條市お店応援クーポン券<br class="d-block d-md-none">参加店リストについてはこちら<i class="fas fa-external-link-alt ml-3"></i></a>
+</div>
+
 <section class="top__about py-5">
   <div class="container">
   <h2 class="top__about-ttl">地域を繋ぐ<br>プラットフォームに</h2>
@@ -61,7 +65,7 @@ get_header(); ?>
       <div class="top__links-item w-100">
         <a class="d-block text-center" href="http://ootou-gojo-shop.com/" target="_blank">
           <h2 class="ttl2 text-white">Store</h2>
-          <p class="text-white mt-3">認証商品</p>
+          <p class="text-white mt-3">取扱商品</p>
           <div class="mt-4 text-center">
             <p class="btn btn-primary">詳しくはこちら</p>
           </div>
