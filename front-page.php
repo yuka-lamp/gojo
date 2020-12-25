@@ -157,8 +157,12 @@ get_header(); ?>
   </div>
 </section>
 
-<section class="top__relation py-5">
-  <div class="container">
+<section class="top__relation pt-5">
+  <div class="container pb-5">
+    <div class="text-center">
+      <h2 class="ttl2">Relation</h2>
+      <p class="text-secondary mt-3 mb-5">関連企業</p>
+    </div>
     <div class="top__relation-inner row">
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www.uchinono-yakata.com" target="_blank">
@@ -281,11 +285,19 @@ get_header(); ?>
         </div>
       </div>
       <div class="top__relation-item col-6 col-sm-3">
-        <a class="d-block text-center" href="#" target="_blank">
+        <a class="d-block text-center" href="https://www.city.gojo.lg.jp/" target="_blank">
           <div class="top__relation-img">
             <img src="<?php echo $wp_url; ?>/dist/images/relation_16.png" alt="五條市" srcset="<?php echo $wp_url ?>/dist/images/relation_16.png 1x, <?php echo $wp_url ?>/dist/images/relation_16@2x.png 2x">
           </div>
           <p class="top__relation-item-text m-0 d-block">＞ 五條市</p>
+        </a>
+      </div>
+      <div class="top__relation-item col-6 col-sm-3">
+        <a class="d-block text-center" href="http://kakinoha.com" target="_blank">
+          <div class="top__relation-img">
+            <img src="<?php echo $wp_url; ?>/dist/images/relation_17.png" alt="株式会社柿の葉ずしヤマト" srcset="<?php echo $wp_url ?>/dist/images/relation_17.png 1x, <?php echo $wp_url ?>/dist/images/relation_17@2x.png 2x">
+          </div>
+          <p class="top__relation-item-text m-0 d-block">＞ 株式会社柿の葉ずしヤマト</p>
         </a>
       </div>
     </div>
