@@ -6,7 +6,7 @@ import 'bootstrap';
 import "slick-carousel";
 import "jquery-drawer";
 
-// require('./drawer');
+require('./drawer');
 
 $(function() {
   // slick

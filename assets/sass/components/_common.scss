@@ -1,3 +1,6 @@
+/*===================================================
+ 共通
+====================================================*/
 body {
   font-size: 0.875rem;
   font-family: 'Roboto', "Noto Sans JP", sans-serif;
@@ -13,11 +16,24 @@ a {
     opacity: 0.5;
   }
 }
-
+/*===================================================
+ 見出し
+====================================================*/
+.main-ttl {
+  span {
+    font-size: 0.875rem;
+    margin-left: 2rem;
+  }
+}
+/*===================================================
+ 文字スタイル
+====================================================*/
 .lh-l {
   line-height: 2;
 }
-
+/*===================================================
+ リンクスタイル
+====================================================*/
 .btn-primary {
   border: 1px solid $white;
   padding: 1rem 0;
@@ -28,7 +44,7 @@ a {
   background: rgba(0, 0, 0, 0);
   border-radius: 0;
   margin: 0 auto;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 
   &::after {
     content: "";
@@ -68,7 +84,7 @@ a {
     margin-right: auto;
     border-radius: 0;
     margin: 0 auto;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
 
     &::after {
       content: "";
@@ -95,12 +111,5 @@ a {
         border-right: 1px solid $white;
       }
     }
-  }
-}
-
-.main-ttl {
-  span {
-    font-size: 0.875rem;
-    margin-left: 2rem;
   }
 }

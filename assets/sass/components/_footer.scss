@@ -1,22 +1,24 @@
+/*===================================================
+ フッター
+====================================================*/
 .footer {
   @include media-breakpoint-up(md) {
     margin-left: 63px;
   }
-
+  // ------------------ お問い合わせリンク ------------------
   &__contact {
-    // 本公開まで
-    // &__bg {
-    //   background: url("../images/footer_bg.png");
-    // background-size: cover;
-    //   width: 100%;
-    //   height: 374px;
-    // }
+    &__bg {
+      background: url("../images/footer_bg.png");
+      background-size: cover;
+      width: 100%;
+      height: 374px;
+    }
 
     &__bg {
       background: url("../images/footer_bg.png");
       background-size: cover;
       width: 100%;
-      height: 254px
+      height: 254px;
     }
 
     &__inner {
@@ -49,27 +51,29 @@
       }
     }
   }
-  // 本公開まで
-  // &__main {
-  //   padding: 8rem 3rem 4rem;
-  //   @include media-breakpoint-down(md) {
-  //     padding: 8rem 15px 5rem;
-  //   }
+  // ------------------ グレー部分 ------------------
   &__main {
-    padding: 4rem 3rem 4rem;
+    padding: 8rem 3rem 4rem;
     @include media-breakpoint-down(md) {
-      padding: 3rem 15px 5rem;
+      padding: 8rem 15px 5rem;
     }
 
-    ul {
+    &__main {
+      padding: 4rem 3rem;
       @include media-breakpoint-down(md) {
-        margin-top: 2rem;
-        font-size: 1rem;
+        padding: 3rem 15px 5rem;
       }
 
-      li {
+      ul {
         @include media-breakpoint-down(md) {
-          line-height: 2;
+          margin-top: 2rem;
+          font-size: 1rem;
+        }
+
+        li {
+          @include media-breakpoint-down(md) {
+            line-height: 2;
+          }
         }
       }
     }

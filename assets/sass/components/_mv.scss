@@ -1,0 +1,121 @@
+/*===================================================
+ メインビジュアル - トップページ
+====================================================*/
+.top {
+  &__mv {
+    position: relative;
+    width: 100%;
+    height: 652px;
+    @include media-breakpoint-down(md) {
+      height: 580px;
+    }
+
+    &__bg {
+      width: 80%;
+      height: 652px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      padding-top: 1.5rem;
+      overflow: hidden;
+      @include media-breakpoint-down(md) {
+        width: 95%;
+        padding-top: calc(53px + 3rem);
+      }
+
+      &-item {
+        width: 100%!important;
+        height: 652px!important;
+
+        &.num-01 {
+          background: url("../images/mv_pc_1@2x.png");
+          background-size: cover;
+          @include media-breakpoint-down(md) {
+            background: url("../images/mv_sp_1@2x.png");
+            background-size: cover;
+          }
+        }
+
+        &.num-02 {
+          background: url("../images/mv_pc_2@2x.png");
+          background-size: cover;
+          @include media-breakpoint-down(md) {
+            background: url("../images/mv_sp_2@2x.png");
+            background-size: cover;
+          }
+        }
+
+        &.num-03 {
+          background: url("../images/mv_pc_3@2x.png");
+          background-size: cover;
+          @include media-breakpoint-down(md) {
+            background: url("../images/mv_sp_3@2x.png");
+            background-size: cover;
+          }
+        }
+      }
+
+      .slick-list {
+        border-radius: 30px 0 0 0;
+        overflow: hidden;
+      }
+
+      .slick-slide {
+        min-height: 100%!important;
+        height: 652px!important;
+      }
+      @keyframes zoomIn {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.05);
+        }
+      }
+      @-webkit-keyframes zoomIn {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.05);
+        }
+      }
+
+      .slick-slide.moving {
+        animation: 20s zoomIn;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      left: 3rem;
+      z-index: 1;
+      bottom: 1rem;
+      @include media-breakpoint-down(md) {
+        top: 9px;
+        left: 9px;
+      }
+
+      &-ttl {
+        font-size: 50px;
+        margin-top: 9rem;
+        letter-spacing: 4px;
+        @include media-breakpoint-down(md) {
+          font-size: 40px;
+          margin-top: 0;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+/*===================================================
+ メインビジュアル - 下層ページ
+====================================================*/
+.submv {
+
+}

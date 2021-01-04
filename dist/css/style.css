@@ -12000,6 +12000,9 @@ a.text-dark:hover, a.text-dark:focus {
       color: black;
       opacity: 0.75; }
 
+/*===================================================
+ 共通
+====================================================*/
 body {
   font-size: 0.875rem;
   font-family: 'Roboto', "Noto Sans JP", sans-serif;
@@ -12012,9 +12015,22 @@ a {
     text-decoration: none;
     opacity: 0.5; }
 
+/*===================================================
+ 見出し
+====================================================*/
+.main-ttl span {
+  font-size: 0.875rem;
+  margin-left: 2rem; }
+
+/*===================================================
+ 文字スタイル
+====================================================*/
 .lh-l {
   line-height: 2; }
 
+/*===================================================
+ リンクスタイル
+====================================================*/
 .btn-primary {
   border: 1px solid #fff;
   padding: 1rem 0;
@@ -12025,7 +12041,7 @@ a {
   background: rgba(0, 0, 0, 0);
   border-radius: 0;
   margin: 0 auto;
-  letter-spacing: .2rem; }
+  letter-spacing: 0.2rem; }
   .btn-primary::after {
     content: "";
     display: block;
@@ -12058,7 +12074,7 @@ a {
     margin-right: auto;
     border-radius: 0;
     margin: 0 auto;
-    letter-spacing: .2rem; }
+    letter-spacing: 0.2rem; }
     .btn-primary-b::after {
       content: "";
       display: block;
@@ -12080,10 +12096,9 @@ a {
         border-top: 1px solid #fff;
         border-right: 1px solid #fff; }
 
-.main-ttl span {
-  font-size: 0.875rem;
-  margin-left: 2rem; }
-
+/*===================================================
+ ヘッダー
+====================================================*/
 .header {
   position: fixed;
   top: 0;
@@ -12091,7 +12106,7 @@ a {
   background: #fff;
   z-index: 3;
   height: 74px; }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     .header {
       width: 63px;
       height: 100vh;
@@ -12106,7 +12121,7 @@ a {
     left: 0;
     bottom: 0;
     z-index: 3; }
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       .header__booking {
         transform: rotate(-90deg);
         left: -49px;
@@ -12118,7 +12133,7 @@ a {
       text-align: center;
       width: 180px;
       height: 63px; }
-      @media (min-width: 768px) {
+      @media (min-width: 576px) {
         .header__booking-inner {
           width: 160px; } }
     .header__booking-text {
@@ -12169,7 +12184,7 @@ a {
 
 .drawer-open .drawer-nav {
   left: 63px !important; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 767.98px) {
     .drawer-open .drawer-nav {
       left: 0 !important; } }
 
@@ -12178,7 +12193,7 @@ a {
   top: calc(50% - 9px);
   left: 9px !important;
   width: 18px; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 767.98px) {
     .drawer-hamburger {
       top: 10px;
       left: auto !important;
@@ -12188,16 +12203,28 @@ a {
   .drawer-hamburger-icon::after {
     top: 7px; }
 
+/*===================================================
+ サイドメニュー分の調整
+====================================================*/
 main {
   margin-top: 74px; }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     main {
       margin-top: 0;
       margin-left: 63px; } }
 
+/*===================================================
+ フッター
+====================================================*/
 @media (min-width: 768px) {
   .footer {
     margin-left: 63px; } }
+
+.footer__contact__bg {
+  background: url("../images/footer_bg.png");
+  background-size: cover;
+  width: 100%;
+  height: 374px; }
 
 .footer__contact__bg {
   background: url("../images/footer_bg.png");
@@ -12226,22 +12253,30 @@ main {
     left: 2rem; }
 
 .footer__main {
-  padding: 4rem 3rem 4rem; }
+  padding: 8rem 3rem 4rem; }
   @media (max-width: 991.98px) {
     .footer__main {
-      padding: 3rem 15px 5rem; } }
-  @media (max-width: 991.98px) {
-    .footer__main ul {
-      margin-top: 2rem;
-      font-size: 1rem; } }
-  @media (max-width: 991.98px) {
-    .footer__main ul li {
-      line-height: 2; } }
+      padding: 8rem 15px 5rem; } }
+  .footer__main__main {
+    padding: 4rem 3rem; }
+    @media (max-width: 991.98px) {
+      .footer__main__main {
+        padding: 3rem 15px 5rem; } }
+    @media (max-width: 991.98px) {
+      .footer__main__main ul {
+        margin-top: 2rem;
+        font-size: 1rem; } }
+    @media (max-width: 991.98px) {
+      .footer__main__main ul li {
+        line-height: 2; } }
   .footer__main__info-name {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1rem; }
 
+/*===================================================
+ メインビジュアル - トップページ
+====================================================*/
 .top__mv {
   position: relative;
   width: 100%;
@@ -12325,6 +12360,12 @@ main {
           margin-top: 0;
           line-height: 3rem; } }
 
+/*===================================================
+ メインビジュアル - 下層ページ
+====================================================*/
+/*===================================================
+ トップページ
+====================================================*/
 .top__info {
   padding: 1.5rem; }
   @media (max-width: 991.98px) {
@@ -12514,6 +12555,18 @@ main {
   .top__relation-img img {
     max-width: 100%; }
 
+/*===================================================
+
+====================================================*/
+/*===================================================
+
+====================================================*/
+/*===================================================
+
+====================================================*/
+/*===================================================
+ ブログ一覧
+====================================================*/
 .blog__item__txt-info {
   color: #9F9F9F;
   padding-right: 1rem; }
@@ -12523,4 +12576,14 @@ main {
     border-right: 1px solid #9F9F9F;
     margin-right: 1rem;
     padding: 0 1rem; }
+
+/*===================================================
+
+====================================================*/
+/*===================================================
+
+====================================================*/
+/*===================================================
+
+====================================================*/
 
