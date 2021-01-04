@@ -17,7 +17,7 @@ $wp_url = get_template_directory_uri(); ?>
     <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社株式会社のロゴ">
     <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</p>
   </h1>
-  <!-- <button type="button" class="drawer-toggle drawer-hamburger">
+  <button type="button" class="drawer-toggle drawer-hamburger">
     <span class="sr-only">toggle mainvisual</span>
     <span class="drawer-hamburger-icon"></span>
   </button>
@@ -55,14 +55,14 @@ $wp_url = get_template_directory_uri(); ?>
         </ul>
       </li>
     </ul>
-  </nav> -->
+  </nav>
 </header>
-<!-- <div class="header__booking bg-primary">
+<div class="header__booking bg-primary">
   <a class="header__booking-inner" href="#">
     <img class="mr-2" style="width: 17.4px; height: 17.4px;"src="<?php echo $wp_url ?>/dist/images/icon_booking.svg" alt="予約アイコン">
     <p class="header__booking-text text-white font-weight-bold m-0 d-inlineß">BOOKING</p>
   </a>
-</div> -->
+</div>
 <!-- /header -->
 
 <main>
@@ -102,8 +102,7 @@ $wp_url = get_template_directory_uri(); ?>
         $permalink = get_the_permalink();
         $date = get_the_date();
         ?>
-      <p class="m-0 mb-2" href="<?php echo $permalink ?>"><span class="top__info-day text-dark d-block d-md-inline-block"><?php echo $date ?></span><?php echo $ttl ?></p>
-      <!-- <a class="col-sm-8 text-secondary text-decoladion_underline" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a> -->
+      <a class="col-sm-8 text-secondary text-decoladion_underline" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a>
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
   </div>
