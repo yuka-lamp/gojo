@@ -12438,6 +12438,26 @@ main {
     margin-top: 11px;
     text-transform: capitalize;
     letter-spacing: 0.14em; }
+  .submv.business {
+    background: url("../images/submv_buisisness.png");
+    background-size: cover;
+    background-position: center; }
+  .submv.company {
+    background: url("../images/submv_company.png");
+    background-size: cover;
+    background-position: center; }
+  .submv.concept {
+    background: url("../images/submv_concept.png");
+    background-size: cover;
+    background-position: center; }
+  .submv.blog {
+    background: url("../images/submv_blog.png");
+    background-size: cover;
+    background-position: center; }
+  .submv.news {
+    background: url("../images/submv_news.png");
+    background-size: cover;
+    background-position: center; }
 
 /*===================================================
  メインビジュアル - 下層ページ(画像なし)

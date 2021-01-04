@@ -208,6 +208,36 @@
     text-transform: capitalize;
     letter-spacing: 0.14em;
   }
+  // 事業紹介
+  &.business {
+    background: url("../images/submv_buisisness.png");
+    background-size: cover;
+    background-position: center;
+  }
+  // 会社概要
+  &.company {
+    background: url("../images/submv_company.png");
+    background-size: cover;
+    background-position: center;
+  }
+  // 取り組みについて
+  &.concept {
+    background: url("../images/submv_concept.png");
+    background-size: cover;
+    background-position: center;
+  }
+  // ブログ一覧
+  &.blog {
+    background: url("../images/submv_blog.png");
+    background-size: cover;
+    background-position: center;
+  }
+  // お知らせ
+  &.news {
+    background: url("../images/submv_news.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 /*===================================================
  メインビジュアル - 下層ページ(画像なし)
