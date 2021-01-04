@@ -95,7 +95,6 @@ get_header(); ?>
       setup_postdata($post);
       $id = get_the_ID();
       $thumbnail = get_the_post_thumbnail_url($id, 'large');
-      $ttl = get_the_title();
       $permalink = get_the_permalink();
       $date = get_the_date();
       $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
