@@ -12,15 +12,20 @@ $wp_url = get_template_directory_uri(); ?>
 
 <body class="drawer drawer--left">
 <?php wp_body_open(); ?>
+
+<!-- ▼ ヘッダー -->
 <header class="header">
   <h1 class="header__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
-    <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社株式会社のロゴ">
-    <p class="d-md-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</p>
+    <a href="<?php $home ?>">
+      <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社株式会社のロゴ">
+      <p class="d-lg-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</p>
+    </a>
   </h1>
   <button type="button" class="drawer-toggle drawer-hamburger">
     <span class="sr-only">toggle mainvisual</span>
     <span class="drawer-hamburger-icon"></span>
   </button>
+  <!-- ▼ メニュー -->
   <nav class="header__nav drawer-nav" role="navigation" style="left: -375px">
     <ul class="header__nav-inner drawer-menu pl-5 pr-5">
       <li class="header__nav-item">
@@ -30,7 +35,7 @@ $wp_url = get_template_directory_uri(); ?>
         <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/concept/">concept</a>
       </li>
       <li class="header__nav-item">
-        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/service/">service</a>
+        <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/business/">business</a>
       </li>
       <li class="header__nav-item">
         <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
@@ -56,19 +61,24 @@ $wp_url = get_template_directory_uri(); ?>
       </li>
     </ul>
   </nav>
+  <!-- ▲ メニュー -->
 </header>
+<!-- ▲ ヘッダー -->
+
+<!-- ▼ 予約ボタン -->
 <div class="header__booking bg-primary">
   <a class="header__booking-inner" href="#">
     <img class="mr-2" style="width: 17.4px; height: 17.4px;"src="<?php echo $wp_url ?>/dist/images/icon_booking.svg" alt="予約アイコン">
     <p class="header__booking-text text-white font-weight-bold m-0 d-inlineß">BOOKING</p>
   </a>
 </div>
-<!-- /header -->
+<!-- ▲ 予約ボタン-->
 
 <main>
 
 <?php if (is_front_page()): ?>
 
+<!-- ▼ メインビジュアル - トップページ -->
 <section class="top__mv">
     <div class="top__mv__bg">
       <div class="top__mv__bg-item d-block num-01"></div>
@@ -76,17 +86,16 @@ $wp_url = get_template_directory_uri(); ?>
       <div class="top__mv__bg-item d-block num-03"></div>
     </div>
     <div class="top__mv__content">
-      <img class="top__mv__content-logo d-md-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社株式会社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+      <img class="top__mv__content-logo d-lg-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社株式会社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
       <p class="top__mv__content-ttl text-uppercase font-weight-bold">GOJO Local<br>Trading <br>Company</p>
     </div>
 </section>
-
 <section class="top__info bg-success py-4 mb-5">
   <div class="top__info__inner row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 p-0">
       <p class="top__info-ttl text-uppercase">Information</p>
     </div>
-    <div class="col-sm-8 text-decoladion_underline m-0">
+    <div class="col-sm-8 text-decoladion_underline p-0 d-flex align-items-center">
       <?php
         $args = [
             'posts_per_page' => 3,
@@ -102,16 +111,45 @@ $wp_url = get_template_directory_uri(); ?>
         $permalink = get_the_permalink();
         $date = get_the_date();
         ?>
-      <a class="col-sm-8 text-secondary text-decoladion_underline" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a>
+      <a class="col-sm-8 text-secondary text-decoladion_underline m-0 p-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a>
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
   </div>
 </section>
+<!-- ▲ メインビジュアル - トップページ -->
 
-<?php else:?>
+<?php elseif (is_page('56') || is_page('58') || is_page('60')):
+global $post;
+$ttl = $post->post_title;
+$slug = $post->post_name;
+?>
 
-<section class="submv">
-
+<!-- ▼ メインビジュアル - お問い合わせページ -->
+<section class="submv noimg">
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="text-container text-center">
+      <h2 class="submv__ttl mincho f-28 text-primary text-uppercase"><?php echo $slug ?></h2>
+      <p class="submv__en text-primary mb-0"><?php echo $ttl ?></p>
+    </div>
+  </div>
 </section>
+<!-- ▲ メインビジュアル - お問い合わせページ -->
+
+<?php else:
+global $post;
+$ttl = $post->post_title;
+$slug = $post->post_name;
+?>
+
+<!-- ▼ メインビジュアル - 下層ページ -->
+<section class="submv <?php echo $slug ?>">
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="text-container text-center">
+      <h2 class="submv__ttl mincho f-28 text-white text-uppercase"><?php echo $slug ?></h2>
+      <p class="submv__en text-white mb-0"><?php echo $ttl ?></p>
+    </div>
+  </div>
+</section>
+<!-- ▲ メインビジュアル - 下層ページ -->
 
 <?php endif; ?>

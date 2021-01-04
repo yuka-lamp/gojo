@@ -24,8 +24,7 @@ get_header(); ?>
         <h2 class="ttl2 text-white">Service</h2>
         <p class="text-white mt-3">事業紹介</p>
         <div class="mt-4 text-center">
-        <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
-        <p class="btn btn-primary">Coming soon</p>
+        <p class="btn btn-primary">詳しくはこちら</p>
         </div>
       </a>
     </div>
@@ -34,8 +33,7 @@ get_header(); ?>
         <h2 class="ttl2 text-white">Company</h2>
         <p class="text-white mt-3">会社概要</p>
         <div class="mt-4 text-center">
-          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
-          <p class="btn btn-primary">Coming soon</p>
+          <p class="btn btn-primary">詳しくはこちら</p>
         </div>
       </a>
     </div>
@@ -44,8 +42,7 @@ get_header(); ?>
         <h2 class="ttl2 text-white">Tour</h2>
         <p class="text-white mt-3">ツアー販売</p>
         <div class="mt-4 text-center">
-          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
-          <p class="btn btn-primary">Coming soon</p>
+          <p class="btn btn-primary">詳しくはこちら</p>
         </div>
       </a>
     </div>
@@ -54,8 +51,7 @@ get_header(); ?>
         <h2 class="ttl2 text-white">Product</h2>
         <p class="text-white mt-3">認証商品</p>
         <div class="mt-4 text-center">
-          <!-- <p class="btn btn-primary">詳しくはこちら</p> -->
-          <p class="btn btn-primary">Coming soon</p>
+          <p class="btn btn-primary">詳しくはこちら</p>
         </div>
       </a>
     </div>
@@ -81,47 +77,13 @@ get_header(); ?>
       <div class="main-ttl">
         <h2 class="text-secondary font-weight-bold">Gojo blog<span class="text-primary">五條市ブログ</span></h2>
       </div>
-      <!-- <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a> -->
+      <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
     </div>
   </div>
   <div class="container">
     <div class="slick-blog blog__wrap">
 
-      <!-- 本公開後削除 -->
-
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <div class="blog__item">
-        <div class="blog__item__img py-5 bg-success">
-          <p class="py-5 d-block text-center mb-0">COMING SOON</p>
-        </div>
-      </div>
-      <!-- 本公開後削除 -->
-
-      <!-- <?php
+      <?php
       $args = [
           'posts_per_page' => 6,
           'post_type' => 'blog',
@@ -149,19 +111,19 @@ get_header(); ?>
           <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
         </div>
       </div>
-      <?php endforeach; wp_reset_postdata(); ?> -->
+      <?php endforeach; wp_reset_postdata(); ?>
     </div>
-    <!-- <div class="text-center">
+    <div class="text-center">
       <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
-    </div> -->
+    </div>
   </div>
 </section>
 
 <section class="top__relation pt-5">
   <div class="container pb-5">
     <div class="text-center">
-      <h2 class="ttl2">Relation</h2>
-      <p class="text-secondary mt-3 mb-5">関連企業</p>
+      <h2 class="ttl2 text-secondary">Relation</h2>
+      <p class="text-primary mt-3 mb-5">関連企業</p>
     </div>
     <div class="top__relation-inner row">
       <div class="top__relation-item col-6 col-sm-3">

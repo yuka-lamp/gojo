@@ -8,7 +8,7 @@
   background: $white;
   z-index: 3;
   height: 74px;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     width: 63px;
     height: 100vh;
     border-right: 1px solid $info;
@@ -26,7 +26,7 @@
     left: 0;
     bottom: 0;
     z-index: 3;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       transform: rotate(-90deg);
       left: -49px;
       bottom: 48px;
@@ -39,7 +39,7 @@
       text-align: center;
       width: 180px;
       height: 63px;
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(lg) {
         width: 160px;
       }
     }
@@ -74,7 +74,7 @@
 
       &-link {
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 500;
         color: $light;
         letter-spacing: 1px;
         display: inline-block;
@@ -109,21 +109,21 @@
 }
 
 .drawer-open .drawer-nav {
-  left: 63px!important;
-  @include media-breakpoint-down(sm) {
-    left: 0!important;
+  left: 0!important;
+  @include media-breakpoint-up(lg) {
+    left: 63px!important;
   }
 }
 
 .drawer-hamburger {
   position: fixed;
-  top: calc(50% - 9px);
-  left: 9px!important;
+  top: 10px;
+  left: auto!important;
+  right: 10px;
   width: 18px;
-  @include media-breakpoint-down(sm) {
-    top: 10px;
-    left: auto!important;
-    right: 10px;
+  @include media-breakpoint-up(lg) {
+    top: calc(50% - 9px);
+    left: 9px!important;
   }
 
   &-icon {
@@ -136,14 +136,12 @@
     }
   }
 }
-
 /*===================================================
  サイドメニュー分の調整
 ====================================================*/
-
 main {
   margin-top: 74px;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     margin-top: 0;
     margin-left: 63px;
   }

@@ -2,46 +2,6 @@
  トップページ
 ====================================================*/
 .top {
-  // ------------------ 新着情報 ------------------
-  &__info {
-    padding: 1.5rem;
-    @include media-breakpoint-down(md) {
-      padding: 1.5rem 1rem;
-    }
-
-    &__inner {
-      width: 90%;
-      margin: 0 auto;
-      @include media-breakpoint-down(md) {
-        width: 100%;
-      }
-    }
-
-    &-ttl {
-      font-size: 1.2rem;
-      letter-spacing: 3px;
-      margin: 0;
-      @include media-breakpoint-down(md) {
-        margin-bottom: 1rem;
-      }
-
-      &::after {
-        content: "";
-        width: 26%;
-        height: 1px;
-        display: inline-block;
-        margin: 0 0 5px 2rem;
-        background: $primary;
-      }
-    }
-
-    &-day {
-      margin-right: 2rem;
-      @include media-breakpoint-down(md) {
-        margin-right: 10px;
-      }
-    }
-  }
   // 導入文
   &__about {
     position: relative;

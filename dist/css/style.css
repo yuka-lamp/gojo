@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -12106,7 +12107,7 @@ a {
   background: #fff;
   z-index: 3;
   height: 74px; }
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
     .header {
       width: 63px;
       height: 100vh;
@@ -12121,7 +12122,7 @@ a {
     left: 0;
     bottom: 0;
     z-index: 3; }
-    @media (min-width: 576px) {
+    @media (min-width: 992px) {
       .header__booking {
         transform: rotate(-90deg);
         left: -49px;
@@ -12133,7 +12134,7 @@ a {
       text-align: center;
       width: 180px;
       height: 63px; }
-      @media (min-width: 576px) {
+      @media (min-width: 992px) {
         .header__booking-inner {
           width: 160px; } }
     .header__booking-text {
@@ -12157,7 +12158,7 @@ a {
         display: inline-block; }
       .header__nav__sub-link {
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 500;
         color: #787878;
         letter-spacing: 1px;
         display: inline-block;
@@ -12183,21 +12184,21 @@ a {
   left: -375px !important; }
 
 .drawer-open .drawer-nav {
-  left: 63px !important; }
-  @media (max-width: 767.98px) {
+  left: 0 !important; }
+  @media (min-width: 992px) {
     .drawer-open .drawer-nav {
-      left: 0 !important; } }
+      left: 63px !important; } }
 
 .drawer-hamburger {
   position: fixed;
-  top: calc(50% - 9px);
-  left: 9px !important;
+  top: 10px;
+  left: auto !important;
+  right: 10px;
   width: 18px; }
-  @media (max-width: 767.98px) {
+  @media (min-width: 992px) {
     .drawer-hamburger {
-      top: 10px;
-      left: auto !important;
-      right: 10px; } }
+      top: calc(50% - 9px);
+      left: 9px !important; } }
   .drawer-hamburger-icon::before {
     top: -7px; }
   .drawer-hamburger-icon::after {
@@ -12208,7 +12209,7 @@ a {
 ====================================================*/
 main {
   margin-top: 74px; }
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
     main {
       margin-top: 0;
       margin-left: 63px; } }
@@ -12360,12 +12361,6 @@ main {
           margin-top: 0;
           line-height: 3rem; } }
 
-/*===================================================
- メインビジュアル - 下層ページ
-====================================================*/
-/*===================================================
- トップページ
-====================================================*/
 .top__info {
   padding: 1.5rem; }
   @media (max-width: 991.98px) {
@@ -12383,7 +12378,7 @@ main {
     margin: 0; }
     @media (max-width: 991.98px) {
       .top__info-ttl {
-        margin-bottom: 1rem; } }
+        margin-bottom: 11px; } }
     .top__info-ttl::after {
       content: "";
       width: 26%;
@@ -12391,12 +12386,68 @@ main {
       display: inline-block;
       margin: 0 0 5px 2rem;
       background: #000; }
+      @media (max-width: 991.98px) {
+        .top__info-ttl::after {
+          margin: 0 0 5px 1rem; } }
   .top__info-day {
     margin-right: 2rem; }
     @media (max-width: 991.98px) {
       .top__info-day {
         margin-right: 10px; } }
 
+/*===================================================
+ メインビジュアル - 下層ページ(画像あり)
+====================================================*/
+.submv {
+  background: url("../images/submv_news.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6rem;
+  border-radius: 0 0 0 50px; }
+  @media (max-width: 991.98px) {
+    .submv {
+      margin-bottom: 4rem; } }
+  .submv .container {
+    width: 100%;
+    height: 289px; }
+    @media (max-width: 991.98px) {
+      .submv .container {
+        height: 242px; } }
+  .submv .text-container {
+    position: relative;
+    z-index: 1; }
+    .submv .text-container::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -22px;
+      width: 35.62px;
+      height: 34.62px;
+      background: url("../images/submv_circle.png");
+      background-size: cover;
+      z-index: -1; }
+  .submv__ttl {
+    align-items: center;
+    letter-spacing: 6px;
+    font-size: 2.25rem;
+    font-weight: 300;
+    z-index: 2; }
+  .submv__en {
+    display: block;
+    font-size: 1rem;
+    margin-top: 11px;
+    text-transform: capitalize;
+    letter-spacing: 0.14em; }
+
+/*===================================================
+ メインビジュアル - 下層ページ(画像なし)
+====================================================*/
+.submv.noimg {
+  background: #eaeff4; }
+
+/*===================================================
+ トップページ
+====================================================*/
 .top__about {
   position: relative; }
   @media (max-width: 991.98px) {
