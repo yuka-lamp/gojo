@@ -1,6 +1,7 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri(); ?>
+
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
 <head>
@@ -15,8 +16,8 @@ $wp_url = get_template_directory_uri(); ?>
 
 <!-- ▼ ヘッダー -->
 <header class="header">
-  <h1 class="header__logo navbar-brand d-flex align-items-center" href="<?php echo $home ?>">
-    <a href="<?php $home ?>">
+  <h1 class="header__logo navbar-brand d-flex align-items-center">
+    <a href="<?php echo $home ?>">
       <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社株式会社のロゴ">
       <p class="d-lg-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</p>
     </a>
@@ -86,7 +87,7 @@ $wp_url = get_template_directory_uri(); ?>
       <div class="top__mv__bg-item d-block num-03"></div>
     </div>
     <div class="top__mv__content">
-      <img class="top__mv__content-logo d-lg-block d-none" style="width: 175px; height:auto;"src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社株式会社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
+      <img class="top__mv__content-logo d-lg-block d-none" style="width: 175px; height:auto;" src="<?php echo $wp_url ?>/dist/images/mv_logo.png" alt="五條市地域商社株式会社のロゴ" srcset="<?php echo $wp_url ?>/dist/images/mv_logo.png 1x, <?php echo $wp_url ?>/dist/images/mv_logo@2x.png 2x">
       <p class="top__mv__content-ttl text-uppercase font-weight-bold">GOJO Local<br>Trading <br>Company</p>
     </div>
 </section>
@@ -111,7 +112,8 @@ $wp_url = get_template_directory_uri(); ?>
         $permalink = get_the_permalink();
         $date = get_the_date();
         ?>
-      <a class="col-sm-8 text-secondary text-decoladion_underline m-0 p-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?></a>
+      <a class="col-sm-8 text-secondary text-decoladion_underline m-0 p-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?>
+      </a>
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
   </div>

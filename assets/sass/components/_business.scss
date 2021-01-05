@@ -2,8 +2,79 @@
   事業紹介
 ====================================================*/
 .business {
-  &__about {
-    
+  &__about {}
+  // サービス紹介
+  &__service {
+    padding: 2rem 0;
+    @include media-breakpoint-down(md) {
+      border-bottom: 1px solid $success;
+    }
+
+    &:last-child() {
+      @include media-breakpoint-down(md) {
+        border-bottom: none;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .main-ttl {
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+
+      span {
+        margin-left: 2rem;
+        @include media-breakpoint-down(md) {
+          margin: 0;
+        }
+      }
+    }
+
+    &__item {
+      width: 24%;
+      padding: 0;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      &-img {
+        width: 100%;
+        height: 170px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include media-breakpoint-down(md) {
+          height: 210px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-btn {
+        color: $info;
+        font-size: 0.750rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 3px 0 3px 6px;
+          border-color: transparent transparent transparent $info;
+          margin: 0 0 1px 7px;
+        }
+      }
+    }
   }
 }
 @include media-breakpoint-down(md) {}

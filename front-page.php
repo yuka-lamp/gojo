@@ -3,10 +3,13 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
+<!-- ▼ クーポン券 -->
 <div class="text-center pl-5 pr-5 mb-4">
   <a class="border border-success py-3 d-block text-center text-decoration-underline text-secondary" href="<?php echo $wp_url ?>/dist/images/coupon.pdf" target="_blank">五條市お店応援クーポン券<br class="d-block d-md-none">参加店リストについてはこちら<i class="fas fa-external-link-alt ml-3"></i></a>
 </div>
+<!-- ▲ クーポン券 -->
 
+<!-- ▼ 導入 -->
 <section class="top__about py-5">
   <div class="container">
   <h2 class="top__about-ttl">地域を繋ぐ<br>プラットフォームに</h2>
@@ -16,9 +19,13 @@ get_header(); ?>
   </div>
   </div>
 </section>
+<!-- ▲ 導入 -->
 
+<!-- ▼ リンク一覧 -->
 <section class="top__links py-5">
   <div class="row w-100 m-0">
+
+    <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
       <a class="d-block text-center">
         <h2 class="ttl2 text-white">Service</h2>
@@ -28,6 +35,9 @@ get_header(); ?>
         </div>
       </a>
     </div>
+    <!-- ▲ リンク -->
+
+    <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
       <a class="d-block text-center">
         <h2 class="ttl2 text-white">Company</h2>
@@ -37,6 +47,9 @@ get_header(); ?>
         </div>
       </a>
     </div>
+    <!-- ▲ リンク -->
+
+    <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
       <a class="d-block text-center">
         <h2 class="ttl2 text-white">Tour</h2>
@@ -46,6 +59,9 @@ get_header(); ?>
         </div>
       </a>
     </div>
+    <!-- ▲ リンク -->
+
+    <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
       <a class="d-block text-center">
         <h2 class="ttl2 text-white">Product</h2>
@@ -55,7 +71,10 @@ get_header(); ?>
         </div>
       </a>
     </div>
+    <!-- ▲ リンク -->
   </div>
+
+  <!-- ▼ リンク -->
   <div class="top__links__store container mt-5">
     <div class="">
       <div class="top__links-item w-100">
@@ -69,20 +88,26 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <!-- ▲ リンク -->
 </section>
+<!-- ▲ リンク一覧 -->
 
+<!-- ▼ 五條市ブログ -->
 <section class="top__blog blog py-5">
+  <!-- ▼ タイトル + 説明文 -->
   <div class="container">
     <div class="d-flex justify-content-between align-items-end mb-5">
       <div class="main-ttl">
-        <h2 class="text-secondary font-weight-bold">Gojo blog<span class="text-primary">五條市ブログ</span></h2>
+        <h2 class="text-secondary font-weight-bold">Gojo blog<span class="text-primary ml-4">五條市ブログ</span></h2>
       </div>
       <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
     </div>
   </div>
-  <div class="container">
-    <div class="slick-blog blog__wrap">
+  <!-- ▲ タイトル + 説明文 -->
 
+  <div class="container">
+    <!-- ▼ スライドショー -->
+    <div class="slick-blog blog__wrap">
       <?php
       $args = [
           'posts_per_page' => 6,
@@ -94,30 +119,42 @@ get_header(); ?>
       foreach ($my_posts as $post):
       setup_postdata($post);
       $id = get_the_ID();
+      $ttl = get_the_title();
       $thumbnail = get_the_post_thumbnail_url($id, 'large');
       $permalink = get_the_permalink();
       $date = get_the_date();
       $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
       ?>
-      <div class="blog__item">
-        <div class="blog__item__img">
-          <a class="d-block" hraf="<?php echo $permalink ?>">
+
+      <!-- ▼ ループするコンテンツ -->
+      <div class="">
+        <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
+          <div class="blog__item__img">
             <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
-          </a>
-        </div>
-        <div class="blog__item__txt">
-          <a class="d-block text-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></a>
-          <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
-        </div>
+          </div>
+          <div class="blog__item__txt">
+            <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
+            <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
+          </div>
+        </a>
       </div>
+      <!-- ▲ ループするコンテンツ -->
+
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
+    <!-- ▲ スライドショー -->
+
+    <!-- ▼ read more -->
     <div class="text-center">
       <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
     </div>
+    <!-- ▲ read more -->
+
   </div>
 </section>
+<!-- ▲ 五條市ブログ -->
 
+<!-- ▼ 関連企業 -->
 <section class="top__relation pt-5">
   <div class="container pb-5">
     <div class="text-center">
@@ -125,6 +162,8 @@ get_header(); ?>
       <p class="text-primary mt-3 mb-5">関連企業</p>
     </div>
     <div class="top__relation-inner row">
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www.uchinono-yakata.com" target="_blank">
           <div class="top__relation-img">
@@ -133,6 +172,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ NPO法人うちのの館</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://gojo-challenge.com" target="_blank">
           <div class="top__relation-img">
@@ -141,6 +183,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社GOJOチャレンジ</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www.gojo.ne.jp/goshin-sen/" target="_blank">
           <div class="top__relation-img">
@@ -149,6 +194,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ NPO法人 五新線再生推進会議</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www1.gojo.ne.jp/~yamato/" target="_blank">
           <div class="top__relation-img">
@@ -157,6 +205,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 特定非営利活動法人 大和社中</p>
         </a>
       </div>
+      <!-- ▼ 企業リンク -->
+
+      <!-- ▲ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www.gojo.ne.jp/g-kanko/" target="_blank">
           <div class="top__relation-img">
@@ -165,6 +216,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 五條市観光協会</p>
         </a>
       </div>
+      <!-- ▼ 企業リンク -->
+
+      <!-- ▲ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://web1.kcn.jp/gojo-mori/" target="_blank">
           <div class="top__relation-img">
@@ -173,6 +227,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 五條市森林組合</p>
         </a>
       </div>
+      <!-- ▼ 企業リンク -->
+
+      <!-- ▲ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://genbei.info" target="_blank">
           <div class="top__relation-img">
@@ -181,6 +238,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社あすも</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://lamidenfance.com" target="_blank">
           <div class="top__relation-img">
@@ -189,6 +249,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ ラミ ダンファンス アラメゾン</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://a-kaki.com" target="_blank">
           <div class="top__relation-img">
@@ -197,6 +260,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 石井物産株式会社</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://www.nouyusha.com" target="_blank">
           <div class="top__relation-img">
@@ -205,6 +271,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 農業生産法人農悠舎王隠堂</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://www.0141kaki.com" target="_blank">
           <div class="top__relation-img">
@@ -213,6 +282,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社栁澤果樹園</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://www.evaguri.com" target="_blank">
           <div class="top__relation-img">
@@ -221,6 +293,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社二升五合</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://www.kiyobank.co.jp" target="_blank">
           <div class="top__relation-img">
@@ -229,6 +304,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社紀陽銀行 五条支店</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://www.nantobank.co.jp" target="_blank">
           <div class="top__relation-img">
@@ -237,6 +315,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社南都銀行 五条支店</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <div class="d-block text-center">
           <div class="top__relation-img">
@@ -245,6 +326,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 有限会社アシスト</p>
         </div>
       </div>
+      <!-- ▼ 企業リンク -->
+
+      <!-- ▲ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="https://www.city.gojo.lg.jp/" target="_blank">
           <div class="top__relation-img">
@@ -253,6 +337,9 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 五條市</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
+      <!-- ▼ 企業リンク -->
       <div class="top__relation-item col-6 col-sm-3">
         <a class="d-block text-center" href="http://kakinoha.com" target="_blank">
           <div class="top__relation-img">
@@ -261,8 +348,11 @@ get_header(); ?>
           <p class="top__relation-item-text m-0 d-block">＞ 株式会社柿の葉ずしヤマト</p>
         </a>
       </div>
+      <!-- ▲ 企業リンク -->
+
     </div>
   </div>
 </section>
+<!-- ▲ 関連企業 -->
 
 <?php get_footer();

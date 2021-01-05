@@ -12010,8 +12010,34 @@ body {
   font-feature-settings: "palt" 1;
   letter-spacing: 0.06em; }
 
+@media (max-width: 991.98px) {
+  .w-90-sp {
+    width: 90%;
+    margin: 0 auto; } }
+
+.sec {
+  padding: 7.5rem auto; }
+  @media (max-width: 991.98px) {
+    .sec {
+      padding: 5rem auto; } }
+
+.sec-t {
+  padding-top: 7.5rem auto; }
+  @media (max-width: 991.98px) {
+    .sec-t {
+      padding-top: 5rem auto; } }
+
+.sec-b {
+  padding-bottom: 7.5rem auto; }
+  @media (max-width: 991.98px) {
+    .sec-b {
+      padding-bottom: 5rem auto; } }
+
 .cc {
   column-count: 2; }
+  @media (max-width: 991.98px) {
+    .cc {
+      column-count: 1; } }
 
 .lh-l {
   line-height: 2; }
@@ -12025,9 +12051,16 @@ h2 {
   letter-spacing: 3px;
   line-height: 3rem; }
 
+.f-15 {
+  font-size: 0.9375rem;
+  line-height: 1.6rem;
+  letter-spacing: 2.5px; }
+
+.main-ttl h2 {
+  letter-spacing: 2px; }
+
 .main-ttl span {
-  font-size: 0.875rem;
-  margin-left: 2rem; }
+  font-size: 0.875rem; }
 
 /*===================================================
  リンクスタイル
@@ -12114,6 +12147,9 @@ a {
   margin: 7.5rem auto;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
+  @media (max-width: 991.98px) {
+    .sec-line::after {
+      margin: 5rem auto; } }
 
 /*===================================================
  ヘッダー
@@ -12424,7 +12460,8 @@ main {
   border-radius: 0 0 0 50px; }
   @media (max-width: 991.98px) {
     .submv {
-      margin-bottom: 4rem; } }
+      margin-bottom: 4rem;
+      border-radius: 0 0 0 25px; } }
   .submv .container {
     width: 100%;
     height: 289px; }
@@ -12569,7 +12606,7 @@ main {
   padding: 0; }
   .top__blog .slick-dots li {
     display: inline-block;
-    margin: 0 15px; }
+    margin: 0 6px; }
     @media (max-width: 991.98px) {
       .top__blog .slick-dots li {
         margin: 0 3px; } }
@@ -12647,6 +12684,58 @@ main {
 /*===================================================
   事業紹介
 ====================================================*/
+.business__service {
+  padding: 2rem 0; }
+  @media (max-width: 991.98px) {
+    .business__service {
+      border-bottom: 1px solid #eaeff4; } }
+  @media (max-width: 991.98px) {
+    .business__service:last-child {
+      border-bottom: none; } }
+  .business__service p {
+    margin: 0; }
+  @media (max-width: 991.98px) {
+    .business__service .main-ttl {
+      text-align: center; } }
+  .business__service .main-ttl span {
+    margin-left: 2rem; }
+    @media (max-width: 991.98px) {
+      .business__service .main-ttl span {
+        margin: 0; } }
+  .business__service__item {
+    width: 24%;
+    padding: 0; }
+    @media (max-width: 991.98px) {
+      .business__service__item {
+        width: 100%;
+        margin-bottom: 2rem; } }
+    .business__service__item-img {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      overflow: hidden; }
+      @media (max-width: 991.98px) {
+        .business__service__item-img {
+          height: 210px; } }
+      .business__service__item-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .business__service__item-btn {
+      color: #9F9F9F;
+      font-size: 0.750rem;
+      font-weight: bold;
+      letter-spacing: 2px; }
+      .business__service__item-btn::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 0 3px 6px;
+        border-color: transparent transparent transparent #9F9F9F;
+        margin: 0 0 1px 7px; }
+
 /*===================================================
 
 ====================================================*/

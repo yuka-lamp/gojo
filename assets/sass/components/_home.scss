@@ -140,7 +140,7 @@
 
       li {
         display: inline-block;
-        margin: 0 15px;
+        margin: 0 6px;
         @include media-breakpoint-down(md) {
           margin: 0 3px;
         }

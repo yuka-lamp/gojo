@@ -8,8 +8,39 @@ body {
   letter-spacing: 0.06em;
 }
 
+.w-90-sp {
+  @include media-breakpoint-down(md) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.sec {
+  padding: 7.5rem auto;
+  @include media-breakpoint-down(md) {
+    padding: 5rem auto;
+  }
+}
+
+.sec-t {
+  padding-top: 7.5rem auto;
+  @include media-breakpoint-down(md) {
+    padding-top: 5rem auto;
+  }
+}
+
+.sec-b {
+  padding-bottom: 7.5rem auto;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 5rem auto;
+  }
+}
+
 .cc {
   column-count: 2;
+  @include media-breakpoint-down(md) {
+    column-count: 1;
+  }
 }
 
 .lh-l {
@@ -25,10 +56,18 @@ h2 {
   line-height: 3rem;
 }
 
+.f-15 {
+  font-size: 0.9375rem;
+  line-height: 1.6rem;
+  letter-spacing: 2.5px;
+}
+
 .main-ttl {
+  h2 {
+    letter-spacing: 2px;
+  }
   span {
     font-size: 0.875rem;
-    margin-left: 2rem;
   }
 }
 /*===================================================
@@ -135,5 +174,8 @@ a {
     margin: 7.5rem auto;
     border-top: 1px solid $primary;
     border-bottom: 1px solid $primary;
+    @include media-breakpoint-down(md) {
+      margin: 5rem auto;
+    }
   }
 }
