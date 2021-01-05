@@ -16,23 +16,25 @@ body {
 }
 
 .sec {
-  padding: 7.5rem auto;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
   @include media-breakpoint-down(md) {
-    padding: 5rem auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
 .sec-t {
-  padding-top: 7.5rem auto;
+  padding-top: 7.5rem;
   @include media-breakpoint-down(md) {
-    padding-top: 5rem auto;
+    padding-top: 5rem;
   }
 }
 
 .sec-b {
-  padding-bottom: 7.5rem auto;
+  padding-bottom: 7.5rem;
   @include media-breakpoint-down(md) {
-    padding-bottom: 5rem auto;
+    padding-bottom: 5rem;
   }
 }
 
@@ -54,6 +56,12 @@ h2 {
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 3rem;
+}
+
+.f-16 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 2.5px;
 }
 
 .f-15 {
