@@ -52,9 +52,6 @@ $wp_url = get_template_directory_uri(); ?>
           <a class="small text-info" href="<?php echo $home ?>/contact/">お問い合わせ</a>
         </li>
         <li class="d-inline">
-          <a class="small text-info" href="<?php echo $home ?>/tarm/">利用規約</a>
-        </li>
-        <li class="d-inline">
           <a class="small text-info" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
         </li>
       </ul>

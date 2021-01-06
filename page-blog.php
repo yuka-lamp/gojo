@@ -37,7 +37,7 @@ get_header(); the_post(); ?>
 
       <!-- ▼ ループするコンテンツ -->
       <div class="blog__list__wrap">
-        <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
+        <a href="<?php echo $permalink ?>" class="blog__item d-block">
           <div class="blog__item__img">
             <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
               <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
@@ -47,7 +47,17 @@ get_header(); the_post(); ?>
           </div>
           <div class="blog__item__txt">
             <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
-            <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
+            <p class="d-inline blog__item__txt-info">
+              <span class="blog__item__txt-cat">
+                <?php if ($terms = get_the_terms($post->ID, 'blog_cat')) {
+                    foreach ( $terms as $term ) {
+                      echo esc_html($term->name);
+                    }
+                  }
+               ?>
+              </span>
+              <?php echo $date ?>
+            </p>
           </div>
         </a>
       </div>

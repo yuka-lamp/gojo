@@ -6,7 +6,9 @@ get_header(); the_post(); ?>
 <!-- ▼ 本文 -->
 <section class="single py-5">
   <div class="container">
-  <?php the_content(); ?>
+    <div class="post-content">
+    <?php the_content(); ?>
+    </div>
   </div>
 </section>
 <!-- ▲ 本文 -->

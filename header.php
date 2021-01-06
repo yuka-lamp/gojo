@@ -50,10 +50,10 @@ $wp_url = get_template_directory_uri(); ?>
       <li class="header__nav-link header__nav__sub">
         <ul class="list-unstyled">
           <li class="header__nav__sub-item">
-            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/contact/">お問い合わせ</a>
+            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/news/">お知らせ</a>
           </li>
           <li class="header__nav__sub-item">
-            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/tarm/">利用規約</a>
+            <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/contact/">お問い合わせ</a>
           </li>
           <li class="header__nav__sub-item">
             <a class="header__nav__sub-link nav-link drawer-menu-item small text-gray" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
@@ -96,7 +96,7 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="col-sm-4 p-0">
       <p class="top__info-ttl text-uppercase">Information</p>
     </div>
-    <div class="col-sm-8 text-decoladion_underline p-0 d-flex align-items-center">
+    <div class="col-sm-8 text-decoladion_underline p-0">
       <?php
         $args = [
             'posts_per_page' => 3,
@@ -112,7 +112,7 @@ $wp_url = get_template_directory_uri(); ?>
         $permalink = get_the_permalink();
         $date = get_the_date();
         ?>
-      <a class="col-sm-8 text-secondary text-decoladion_underline m-0 p-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?>
+      <a class="col-sm-12 d-block text-secondary text-decoladion_underline mb-2 p-0" href="<?php echo $permalink ?>"><span class="top__info-day text-primary"><?php echo $date ?></span><?php echo $ttl ?>
       </a>
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
