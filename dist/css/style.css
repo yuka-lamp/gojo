@@ -12478,7 +12478,7 @@ main {
  メインビジュアル - 下層ページ(画像あり)
 ====================================================*/
 .submv {
-  background: url("../images/submv_news.png");
+  background: url("../images/submv_buisisness.png");
   background-size: cover;
   background-position: center;
   margin-bottom: 6rem;
@@ -12837,7 +12837,7 @@ main {
     margin: 0 10px 5px 0; }
 
 /*===================================================
- ブログ一覧
+ ブログ - 共通
 ====================================================*/
 .blog__item__txt-info {
   color: #9F9F9F;
@@ -12848,6 +12848,37 @@ main {
     border-right: 1px solid #9F9F9F;
     margin-right: 1rem;
     padding: 0 1rem; }
+
+/*===================================================
+ ブログ一覧
+====================================================*/
+.blog__list__wrap {
+  width: 32%;
+  margin-right: 1.5%;
+  margin-bottom: 2rem; }
+  @media (max-width: 991.98px) {
+    .blog__list__wrap {
+      width: 100%;
+      margin-right: 0; } }
+  .blog__list__wrap:nth-child(3n) {
+    margin-right: 0; }
+
+.blog__nav {
+  width: 80%;
+  margin: 0 auto; }
+  @media (max-width: 991.98px) {
+    .blog__nav {
+      width: 100%; } }
+  .blog__nav .nav-item {
+    width: 20%;
+    padding: 10px 0;
+    border-radius: 0;
+    color: #b10017;
+    border: 1px solid #b10017;
+    font-size: 0.9375rem; }
+    .blog__nav .nav-item.active {
+      color: #fff;
+      background: #b10017; }
 
 /*===================================================
 

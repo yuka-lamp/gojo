@@ -1,45 +1,75 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
-get_header(); ?>
+get_header(); the_post(); ?>
 
-<section class="py-5">
-<div class="container">
-  <div class="slick-blog blog__wrap row">
-    <?php
-    $args = [
-        'posts_per_page' => 6,
-        'post_type' => 'blog',
-        'orderby' => 'date',
-        'order' => 'ASC',
-    ];
-    $my_posts = get_posts($args);
-    foreach ($my_posts as $post):
-    setup_postdata($post);
-    $id = get_the_ID();
-    $thumbnail = get_the_post_thumbnail_url($id, 'large');
-    $ttl = get_the_title();
-    $permalink = get_the_permalink();
-    $date = get_the_date();
-    $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
-    ?>
-    <div class="blog__item col-sm-4">
-      <div class="blog__item__img">
-        <a class="d-block" hraf="<?php echo $permalink ?>">
-          <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+<!-- ▼ 導入 -->
+<section class="blog">
+  <div class="container">
+
+    <!-- ▼ ナビ -->
+    <nav class="blog__nav nav nav-pills nav-fill pb-5">
+      <a class="nav-item nav-link" href="<?php echo $home ?>/blog/">すべて</a>
+      <a class="nav-item nav-link <?php if(strcmp($term,'cat-1')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-1/">カテゴリ1
+      </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
+      <a class="nav-item nav-link <?php if(strcmp($term,'cat-2')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-2/">
+        カテゴリ2
+      </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
+      <a class="nav-item nav-link <?php if(strcmp($term,'cat-3')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-3/">
+        カテゴリ3
+      </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
+      <a class="nav-item nav-link <?php if(strcmp($term,'cat-4')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-4/">
+        カテゴリ4
+      </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
+    </nav>
+    <!-- ▲ ナビ -->
+
+    <!-- ▼ 一覧 -->
+    <div class="blog__list d-flex flex-wrap mt-4">
+      <?php
+      $args = [
+          'posts_per_page' => 6,
+          'post_type' => 'gojo-blog',
+          'taxonomy' => 'blog_cat',   //タクソノミー名を指定
+          'term' => $term,
+          'orderby' => 'date',
+          'order' => 'ASC',
+      ];
+      $my_posts = get_posts($args);
+      foreach ($my_posts as $post):
+      setup_postdata($post);
+      $id = get_the_ID();
+      $ttl = get_the_title();
+      $thumbnail = get_the_post_thumbnail_url($id, 'large');
+      $permalink = get_the_permalink();
+      $date = get_the_date();
+      $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
+      ?>
+
+      <!-- ▼ ループするコンテンツ -->
+      <div class="blog__list__wrap">
+        <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
+          <div class="blog__item__img">
+            <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
+              <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+            <?php else: // 画像がない場合 ?>
+              <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
+            <?php endif; ?>
+          </div>
+          <div class="blog__item__txt">
+            <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
+            <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
+          </div>
         </a>
       </div>
-      <div class="blog__item__txt">
-        <a class="d-block text-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></a>
-        <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
-      </div>
+      <!-- ▲ ループするコンテンツ -->
+
+      <?php endforeach; wp_reset_postdata(); ?>
     </div>
-    <?php endforeach; wp_reset_postdata(); ?>
+    <!-- ▲ 一覧 -->
+
   </div>
-<!-- /row -->
-</div>
-<!-- /container -->
 </section>
-<!-- /mainsection -->
+<!-- ▲ 導入 -->
 
 <?php get_footer();

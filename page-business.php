@@ -35,7 +35,7 @@ get_header(); the_post(); ?>
       <a hraf="<?php get_the_permalink(); ?>" class="business__service__item">
           <!-- ▼ アイキャッチ画像 -->
           <div class="business__service__item-img">
-            <?php if(post_custom('image')):  // 画像がある場合 ?>
+            <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
               <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php the_title(); ?>">
             <?php else: // 画像がない場合 ?>
               <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
@@ -88,7 +88,7 @@ get_header(); the_post(); ?>
       <a hraf="<?php get_the_permalink(); ?>" class="business__service__item">
           <!-- ▼ アイキャッチ画像 -->
           <div class="business__service__item-img">
-            <?php if(post_custom('image')):  // 画像がある場合 ?>
+            <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
               <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php the_title(); ?>">
             <?php else: // 画像がない場合 ?>
               <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">

@@ -111,7 +111,7 @@ get_header(); ?>
       <?php
       $args = [
           'posts_per_page' => 6,
-          'post_type' => 'blog',
+          'post_type' => 'gojo-blog',
           'orderby' => 'date',
           'order' => 'ASC',
       ];
@@ -130,7 +130,11 @@ get_header(); ?>
       <div class="">
         <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
           <div class="blog__item__img">
-            <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+            <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
+              <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+            <?php else: // 画像がない場合 ?>
+              <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
+            <?php endif; ?>
           </div>
           <div class="blog__item__txt">
             <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>

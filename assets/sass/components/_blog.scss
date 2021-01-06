@@ -1,5 +1,5 @@
 /*===================================================
- ブログ一覧
+ ブログ - 共通
 ====================================================*/
 .blog {
   &__item {
@@ -17,6 +17,48 @@
           padding: 0 1rem;
         }
       }
+    }
+  }
+}
+/*===================================================
+ ブログ一覧
+====================================================*/
+.blog {
+  &__list {
+    &__wrap {
+      width: 32%;
+      margin-right: 1.5%;
+      margin-bottom: 2rem;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__nav {
+    width: 80%;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    .nav-item {
+      width: 20%;
+      padding: 10px 0;
+      border-radius: 0;
+      color: $secondary;
+      border: 1px solid $secondary;
+      font-size: 0.9375rem;
+
+      &.active {
+        color: $white;
+        background: $secondary;
+      };
     }
   }
 }
