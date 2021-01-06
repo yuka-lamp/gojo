@@ -70,9 +70,14 @@ h2 {
   letter-spacing: 2.5px;
 }
 
+.f-12 {
+  font-size: 0.750rem;
+}
+
 .main-ttl {
   h2 {
     letter-spacing: 2px;
+    text-transform: uppercase;
   }
   span {
     font-size: 0.875rem;
@@ -184,6 +189,26 @@ a {
     border-bottom: 1px solid $primary;
     @include media-breakpoint-down(md) {
       margin: 5rem auto;
+    }
+  }
+}
+
+/*===================================================
+ テーブル
+====================================================*/
+
+table {
+  tr {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid $success;
+    th {
+      width: 24%;
+      padding: 1rem 0
+    }
+    td {
+      width: 76%;
+      padding: 1rem 0
     }
   }
 }

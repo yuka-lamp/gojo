@@ -1,4 +1,66 @@
 /*===================================================
-
+  会社概要
 ====================================================*/
-@include media-breakpoint-down(md) {}
+.company {
+  // メッセージ
+  &__message {}
+  // 会社情報
+  &__profile {}
+  // 認定マーク
+  &__mark {
+    &-content {
+      width: 84%;
+      margin: 0 auto;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        flex-flow: column-reverse;
+      }
+    }
+
+    &-text {
+      width: 67%;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-top: 2rem;
+      }
+    }
+
+    &-img {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  // メンバー一覧
+  &__member {
+    &__item {
+      width: 24%;
+      margin-right: 1.333333%;
+      margin-bottom: 1rem;
+      @include media-breakpoint-down(md) {
+        width: 49%;
+        margin-right: 2%;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(2n) {
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
+      }
+
+      &-img {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      &-en {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
