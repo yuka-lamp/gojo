@@ -67,6 +67,14 @@ get_header(); the_post(); ?>
 
         <?php endforeach; wp_reset_postdata(); ?>
 
+        <!-- ▼ ページネーション -->
+        <?php
+        if (function_exists('wp_pagenavi')) {
+        wp_pagenavi(['query' => $wp_query]);
+        }
+        ?>
+        <!-- ▲ ページネーション -->
+
       <?php else :  // 記事が投稿されていない場合?>
 
         <p class="d-block text-center w-100 py-5 my-5">このカテゴリーにはまだ記事が投稿されていません</p>

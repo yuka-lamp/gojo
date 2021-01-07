@@ -22,11 +22,24 @@ get_header(); the_post(); ?>
         $permalink = get_the_permalink();
         $date = get_the_date();
         ?>
+
+      <!-- ▼ ループするコンテンツ -->
       <a class="news__item text-secondary text-decoladion_underline m-0 py-4" href="<?php echo $permalink ?>">
         <span class="news__item-day text-info f-12"><?php echo $date ?></span>
         <span class="news__item-ttl"><span><?php echo $ttl ?></span>
       </a>
+      <!-- ▲ ループするコンテンツ -->
+      
       <?php endforeach; wp_reset_postdata(); ?>
+
+      <!-- ▼ ページネーション -->
+      <?php
+      if (function_exists('wp_pagenavi')) {
+      wp_pagenavi(['query' => $wp_query]);
+      }
+      ?>
+      <!-- ▲ ページネーション -->
+
     </div>
   </div>
 </section>

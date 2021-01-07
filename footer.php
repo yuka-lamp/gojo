@@ -49,9 +49,12 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="d-md-flex justify-content-between align-items-end mt-5">
       <ul class="list-unstyled">
         <li class="d-inline">
+          <a class="small text-info" href="<?php echo $home ?>/news/">お知らせ</a>
+        </li>
+        <li class="d-inline ml-3">
           <a class="small text-info" href="<?php echo $home ?>/contact/">お問い合わせ</a>
         </li>
-        <li class="d-inline">
+        <li class="d-inline ml-3">
           <a class="small text-info" href="<?php echo $home ?>/privacy-policy">プライバシーポリシー</a>
         </li>
       </ul>

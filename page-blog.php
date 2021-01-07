@@ -64,6 +64,15 @@ get_header(); the_post(); ?>
       <!-- ▲ ループするコンテンツ -->
 
       <?php endforeach; wp_reset_postdata(); ?>
+
+      <!-- ▼ ページネーション -->
+      <?php
+      if (function_exists('wp_pagenavi')) {
+      wp_pagenavi(['query' => $wp_query]);
+      }
+      ?>
+      <!-- ▲ ページネーション -->
+      
     </div>
     <!-- ▲ 一覧 -->
 
