@@ -26,45 +26,52 @@ get_header(); the_post(); ?>
 
     <!-- ▼ 一覧 -->
     <div class="blog__list d-flex flex-wrap mt-4">
-      <?php
-      $args = [
-          'posts_per_page' => 6,
-          'post_type' => 'gojo-blog',
-          'taxonomy' => 'blog_cat',   //タクソノミー名を指定
-          'term' => $term,
-          'orderby' => 'date',
-          'order' => 'ASC',
-      ];
-      $my_posts = get_posts($args);
-      foreach ($my_posts as $post):
-      setup_postdata($post);
-      $id = get_the_ID();
-      $ttl = get_the_title();
-      $thumbnail = get_the_post_thumbnail_url($id, 'large');
-      $permalink = get_the_permalink();
-      $date = get_the_date();
-      $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
-      ?>
+      <?php if ( have_posts() ) :  // 記事が投稿されている場合?>
+        <?php
+        $args = [
+            'posts_per_page' => 6,
+            'post_type' => 'gojo-blog',
+            'taxonomy' => 'blog_cat',   //タクソノミー名を指定
+            'term' => $term,
+            'orderby' => 'date',
+            'order' => 'ASC',
+        ];
+        $my_posts = get_posts($args);
+        foreach ($my_posts as $post):
+        setup_postdata($post);
+        $id = get_the_ID();
+        $ttl = get_the_title();
+        $thumbnail = get_the_post_thumbnail_url($id, 'large');
+        $permalink = get_the_permalink();
+        $date = get_the_date();
+        $cat = get_the_term_list($post->ID, 'blog_cat', $before, $sep, $after);
+        ?>
 
-      <!-- ▼ ループするコンテンツ -->
-      <div class="blog__list__wrap">
-        <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
-          <div class="blog__item__img">
-            <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
-              <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
-            <?php else: // 画像がない場合 ?>
-              <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
-            <?php endif; ?>
-          </div>
-          <div class="blog__item__txt">
-            <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
-            <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
-          </div>
-        </a>
-      </div>
-      <!-- ▲ ループするコンテンツ -->
+        <!-- ▼ ループするコンテンツ -->
+        <div class="blog__list__wrap">
+          <a hraf="<?php echo $permalink ?>" class="blog__item d-block">
+            <div class="blog__item__img">
+              <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
+                <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+              <?php else: // 画像がない場合 ?>
+                <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
+              <?php endif; ?>
+            </div>
+            <div class="blog__item__txt">
+              <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
+              <div class="d-inline blog__item__txt-info"><?php echo $cat ?><?php echo $date ?></div>
+            </div>
+          </a>
+        </div>
+        <!-- ▲ ループするコンテンツ -->
 
-      <?php endforeach; wp_reset_postdata(); ?>
+        <?php endforeach; wp_reset_postdata(); ?>
+
+      <?php else :  // 記事が投稿されていない場合?>
+
+        <p class="d-block text-center w-100 py-5 my-5">このカテゴリーにはまだ記事が投稿されていません</p>
+
+      <?php endif; ?>
     </div>
     <!-- ▲ 一覧 -->
 

@@ -146,7 +146,7 @@ $slug = $post->post_name;
 <!-- ▼ メインビジュアル - 下層ページ -->
 
 <section class="submv
-<?php if ( is_page('52') || is_tax( 'blog_cat', 'gojo-blog' ) || is_singular( 'gojo-blog' ) ): /* ブログの場合 */ ?>
+<?php if ( is_page('52') || is_archive('gojo-blog') || is_singular( 'gojo-blog' ) ): /* ブログの場合 */ ?>
 blog
 <?php elseif ( is_page('54') || is_archive() && is_category('news') || is_single() && in_category('news') ): /* お知らせの場合 */ ?>
 news
@@ -159,12 +159,12 @@ news
     <div class="text-container text-center">
 
 
-        <?php if ( is_page('52') || is_tax( 'blog_cat', 'gojo-blog' ) || is_singular( 'gojo-blog' ) ): /* ブログの場合 */ ?>
+        <?php if ( is_page('52') || is_archive('gojo-blog') || is_singular( 'gojo-blog' ) ): /* ブログの場合 */ ?>
 
           <h2 class="submv__ttl mincho f-28 text-white text-uppercase">BLOG</h2>
           <p class="submv__en text-white mb-0">ブログ</p>
 
-        <?php elseif ( is_page('54') || is_archive() && is_category('news') || is_single() && in_category('news') ): /* お知らせの場合 */ ?>
+        <?php elseif ( is_page('54') || is_archive() && is_category('news') || is_single() ): /* お知らせの場合 */ ?>
 
           <h2 class="submv__ttl mincho f-28 text-white text-uppercase">NEWS</h2>
           <p class="submv__en text-white mb-0">お知らせ</p>
