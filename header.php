@@ -67,12 +67,12 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- ▲ ヘッダー -->
 
 <!-- ▼ 予約ボタン -->
-<div class="header__booking bg-primary">
+<!-- <div class="header__booking bg-primary">
   <a class="header__booking-inner" href="#">
     <img class="mr-2" style="width: 17.4px; height: 17.4px;"src="<?php echo $wp_url ?>/dist/images/icon_booking.svg" alt="予約アイコン">
     <p class="header__booking-text text-white font-weight-bold m-0 d-inlineß">BOOKING</p>
   </a>
-</div>
+</div> -->
 <!-- ▲ 予約ボタン-->
 
 <main>
