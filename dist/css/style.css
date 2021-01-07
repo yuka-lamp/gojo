@@ -12053,6 +12053,11 @@ h2 {
   letter-spacing: 3px;
   line-height: 3rem; }
 
+.f-18 {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  letter-spacing: 2.5px; }
+
 .f-16 {
   font-size: 1rem;
   line-height: 1.6rem;
@@ -12959,6 +12964,8 @@ main {
       text-decoration: none; }
   .post-content a {
     color: #33bad2; }
+    .post-content a:hover {
+      text-decoration: underline !important; }
   .post-content p {
     font-size: 1em;
     line-height: 200%;
@@ -13107,6 +13114,99 @@ main {
       border-bottom: 3px solid #d27110; }
 
 /*===================================================
-
+  お問い合わせ
 ====================================================*/
+.contact__tel {
+  font-weight: 300;
+  font-size: 2.25rem; }
+  .contact__tel span {
+    font-size: 1.25rem;
+    margin-right: 10px; }
+
+.contact__form {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto; }
+  .contact__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem; }
+    @media (max-width: 991.98px) {
+      .contact__form-line {
+        display: block;
+        margin: 0 0 20px; } }
+  .contact__form-head {
+    width: 30%;
+    padding: 15px 0 0;
+    border: none;
+    background: none;
+    color: #222;
+    vertical-align: top;
+    position: relative;
+    font-weight: normal;
+    font-size: 0.9375rem;
+    line-height: 1.6rem;
+    letter-spacing: 2.5px; }
+    @media (max-width: 991.98px) {
+      .contact__form-head {
+        width: 100%;
+        padding: 0 0 5px; } }
+  .contact__form-content {
+    width: 70%; }
+    @media (max-width: 991.98px) {
+      .contact__form-content {
+        width: 100%; } }
+  .contact__form input,
+  .contact__form optgroup,
+  .contact__form select,
+  .contact__form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #eaeff4;
+    border-radius: 3px;
+    padding: 9px 20px;
+    width: 100%;
+    font-size: 0.9375rem;
+    line-height: 1.6rem;
+    letter-spacing: 2.5px;
+    position: relative;
+    display: block; }
+    @media (max-width: 991.98px) {
+      .contact__form input,
+      .contact__form optgroup,
+      .contact__form select,
+      .contact__form textarea {
+        padding: 11px 20px; } }
+  .contact__form .select-wrap {
+    position: relative;
+    margin-bottom: 1.5rem; }
+    .contact__form .select-wrap::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-top: solid 2px #222;
+      border-right: solid 2px #222;
+      -ms-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+      position: absolute;
+      margin-top: -4px; }
+  .contact__form [type="submit"]:not(:disabled) {
+    display: block;
+    width: 320px;
+    background: #000;
+    color: #FFF;
+    padding: 18px 0;
+    margin: 35px auto 45px;
+    text-align: center;
+    font-size: 17px; }
+    @media (max-width: 991.98px) {
+      .contact__form [type="submit"]:not(:disabled) {
+        width: 100%;
+        margin: 0 auto 35px; } }
 

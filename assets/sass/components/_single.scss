@@ -59,6 +59,9 @@
 
     a {
       color: #33bad2;
+      &:hover {
+        text-decoration: underline!important;
+      }
     }
 
     p {
