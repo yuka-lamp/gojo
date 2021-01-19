@@ -38,8 +38,9 @@ get_header(); the_post(); ?>
         <tr>
           <th class="font-weight-bold">所在地</th>
           <td>
-            〒637-0417<br>奈良県五條市大塔町阪本249
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.4187752330918!2d135.72979401521937!3d34.21232408056262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6006dd18eca3bbaf%3A0x9e3e997506b048!2z44CSNjM3LTA0MTcg5aWI6Imv55yM5LqU5qKd5biC5aSn5aGU55S66Ziq5pys77yS77yU77yZ!5e0!3m2!1sja!2sjp!4v1610953032850!5m2!1sja!2sjp" width="100%" height="137px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            〒637-0417
+            <br>奈良県五條市大塔町阪本249
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.4187752330918!2d135.72979401521937!3d34.21232408056262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6006dd18eca3bbaf%3A0x9e3e997506b048!2z44CSNjM3LTA0MTcg5aWI6Imv55yM5LqU5qKd5biC5aSn5aGU55S66Ziq5pys77yS77yU77yZ!5e0!3m2!1sja!2sjp!4v1610953032850!5m2!1sja!2sjp" width="100%" height="137px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mt-3"></iframe>
           </iframe>
           </td>
         </tr>
@@ -59,7 +60,7 @@ get_header(); the_post(); ?>
         </tr>
         <tr>
           <th class="font-weight-bold">資本金</th>
-          <td>五條市地域商社 株式会社</td>
+          <td>5,000,000円</td>
         </tr>
         <tr>
           <th class="font-weight-bold">従業員</th>

@@ -3,21 +3,13 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); the_post(); ?>
 
-<!-- ▼ 導入 -->
-<section class="business__about sec-line w-90-sp">
-  <div class="container">
-    <h2 class="mb-5">地域を繋ぐ<br>プラットフォームに</h2>
-    <p class="d-block text-left lh-l cc">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
-  </div>
-</section>
-<!-- ▲ 導入 -->
-
 <!-- ▼ 地域商社事業 -->
 <section class="business__service w-90-sp pt-0">
   <div class="container">
     <div class="main-ttl">
       <h2 class="text-secondary font-weight-bold pb-0">Trading Company<br class="d-block d-md-none"><span class="text-primary">地域商社事業</span></h2>
-      <p class="d-block text-left lh-l pt-3 pb-4">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
+      <p class="d-block text-left lh-l pt-3 pb-4">五條市地域商社株式会社は5つの理念に基づき各種事業を運営してまいります。
+        <br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
     </div>
     <div class="d-flex justify-content-between flex-wrap">
       <?php query_posts( array(
@@ -71,7 +63,8 @@ get_header(); the_post(); ?>
   <div class="container">
     <div class="main-ttl">
       <h2 class="text-secondary font-weight-bold pb-0">management<br class="d-block d-md-none"><span class="text-primary">指定管理運営事業</span></h2>
-      <p class="d-block text-left lh-l pt-3 pb-4">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
+      <p class="d-block text-left lh-l pt-3 pb-4">五條市から観光・宿泊・物販に関する以下の指定管理を受けて運営をしております。
+        <br>6時星の国、道の駅ヨシノジ大塔、おおとうきょうどかん、ふれあい交流館</p>
     </div>
     <div class="d-flex justify-content-between flex-wrap">
       <?php query_posts( array(
@@ -127,7 +120,7 @@ get_header(); the_post(); ?>
   <div class="container">
     <div class="main-ttl">
       <h2 class="text-secondary font-weight-bold pb-0">product<br class="d-block d-md-none"><span class="text-primary">認証商品一覧</span></h2>
-      <p class="d-block text-left lh-l pt-3 pb-4">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
+      <p class="d-block text-left lh-l pt-3 pb-4">五條市認定マークを設け、五條市が誇る特産品などに付与することで、地域ブランドとしての信用・信頼を蓄積し、五條市全体のブランド力強化を目指しています</p>
     </div>
     <div class="d-flex justify-content-between flex-wrap">
       <?php query_posts( array(

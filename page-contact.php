@@ -13,7 +13,7 @@ get_header(); the_post(); ?>
       <br class="d-block d-md-none">担当者よりご連絡させて頂きます。
     </p>
     <p class="f-18 mb-2">お電話でのご相談はこちらから</p>
-    <a class="contact__tel" href="tel:0747-35-0311"><span>TEL</span>0747-35-0311</a>
+    <a class="contact__tel" href="tel:0747350321"><span>TEL</span>0747-35-0321</a>
   </div>
   <!-- ▼ フォーム -->
   <?php the_content(); ?>
