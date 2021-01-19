@@ -19,8 +19,9 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="d-md-flex justify-content-between align-items-end">
       <div class="footer__main__info">
         <h3 class="footer__main__info-name">五條市地域商社株式会社</h3>
-        <p class="m-0">〒637-0417　奈良県五條市大塔町阪本225-6
-          <br>TEL：<a href="tel:0747-35-0311">0747-35-0311</a>
+        <p class="m-0">＜事務局＞
+          <br>〒637-0417　奈良県五條市大塔町阪本249（ロッジ星のくに内）
+          <br>TEL：<a href="tel:0747-35-0321">0747-35-0321</a>
         </p>
       </div>
       <div class="">
@@ -37,9 +38,9 @@ $wp_url = get_template_directory_uri(); ?>
           <li class="d-inline ml-4">
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
           </li>
-          <li class="d-inline ml-4">
+          <!-- <li class="d-inline ml-4">
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/tour/">tour</a>
-          </li>
+          </li> -->
           <li class="d-inline ml-4">
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
           </li>

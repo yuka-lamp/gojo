@@ -16,12 +16,6 @@ get_header(); the_post(); ?>
       <div class="col-12 col-md-4 m-0 p-0">
         <img class="w-100" src="<?php echo $wp_url ?>/dist/images/company_msg_1.png" alt="五條市地域商社の写真" srcset="<?php echo $wp_url ?>/dist/images/company_msg_1.png 1x, <?php echo $wp_url ?>/dist/images/company_msg_1@2x.png 2x">
       </div>
-      <div class="col-4 d-none d-md-block m-0 p-0">
-        <img class="w-100" src="<?php echo $wp_url ?>/dist/images/company_msg_2.png" alt="五條市地域商社の写真" srcset="<?php echo $wp_url ?>/dist/images/company_msg_2.png 1x, <?php echo $wp_url ?>/dist/images/company_msg_2@2x.png 2x">
-      </div>
-      <div class="col-4 d-none d-md-block m-0 p-0">
-        <img class="w-100" src="<?php echo $wp_url ?>/dist/images/company_msg_3.png" alt="五條市地域商社の写真" srcset="<?php echo $wp_url ?>/dist/images/company_msg_3.png 1x, <?php echo $wp_url ?>/dist/images/company_msg_3@2x.png 2x">
-      </div>
     </div>
     <!-- ▲ 画像 -->
   </div>
@@ -44,23 +38,24 @@ get_header(); the_post(); ?>
         <tr>
           <th class="font-weight-bold">所在地</th>
           <td>
-            〒604-0024<br>京都府京都市中京区下妙覚寺町195 KMGビル4F
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104994.9491861849!2d135.41602455284243!3d34.67762336975711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1609902105587!5m2!1sja!2sjp" width="100%" height="137px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            〒637-0417<br>奈良県五條市大塔町阪本249
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.4187752330918!2d135.72979401521937!3d34.21232408056262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6006dd18eca3bbaf%3A0x9e3e997506b048!2z44CSNjM3LTA0MTcg5aWI6Imv55yM5LqU5qKd5biC5aSn5aGU55S66Ziq5pys77yS77yU77yZ!5e0!3m2!1sja!2sjp!4v1610953032850!5m2!1sja!2sjp" width="100%" height="137px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </iframe>
           </td>
         </tr>
         <tr>
           <th class="font-weight-bold">TEL</th>
-          <td>五條市地域商社 株式会社</td>
+          <td>0747-35-0321（ロッジ星のくに内）</td>
         </tr>
       </tbody>
       <tbody class="col-12 col-md-6">
         <tr>
           <th class="font-weight-bold">代表者名</th>
-          <td>五條市地域商社 株式会社</td>
+          <td>宮倉 靖幸</td>
         </tr>
         <tr>
           <th class="font-weight-bold">設立</th>
-          <td>〒604-0024<br>京都府京都市中京区下妙覚寺町195 KMGビル4F</td>
+          <td>2020年4月1日</td>
         </tr>
         <tr>
           <th class="font-weight-bold">資本金</th>
@@ -86,8 +81,9 @@ get_header(); the_post(); ?>
     <!-- ▼ コンテンツ -->
     <div class="company__mark-content d-flex flex-wrap justify-content-between mt-5">
       <div class="company__mark-text">
-        <h2 class="mt-3 mb-4">地域を繋ぐプラットフォームに</h2>
-        <p class="d-block text-left lh-l m-0">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、</p>
+        <h2 class="mt-3 mb-4">地域ブランドの確立を目指して</h2>
+        <p class="d-block text-left lh-l m-0">五條市認定マークを設け、五條市が誇る特産品などに付与することで、地域ブランドとしての信用・信頼を蓄積し、五條市全体のブランド力強化を目指しています。
+          <br>ベースデザインは旧大塔村の村章をリメイクし、市の花である桔梗を中央に配し、周囲には特産品「柿」の葉を並べました。</p>
       </div>
       <div class="company__mark-img">
         <img src="<?php echo $wp_url ?>/dist/images/company_mark.png" alt="" srcset="<?php echo $wp_url ?>/dist/images/company_mark.png 1x, <?php echo $wp_url ?>/dist/images/company_mark@2x.png 2x">

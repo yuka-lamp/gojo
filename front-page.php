@@ -27,8 +27,8 @@ get_header(); ?>
 
     <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
-      <a class="d-block text-center">
-        <h2 class="ttl2 text-white">Service</h2>
+      <a href="<?php echo $home ?>/business/" class="d-block text-center">
+        <h2 class="ttl2 text-white">Business</h2>
         <p class="text-white mt-3">事業紹介</p>
         <div class="mt-4 text-center">
         <p class="btn btn-primary">詳しくはこちら</p>
@@ -39,7 +39,7 @@ get_header(); ?>
 
     <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
-      <a class="d-block text-center">
+      <a  href="<?php echo $home ?>/company/" class="d-block text-center">
         <h2 class="ttl2 text-white">Company</h2>
         <p class="text-white mt-3">会社概要</p>
         <div class="mt-4 text-center">
@@ -55,7 +55,7 @@ get_header(); ?>
         <h2 class="ttl2 text-white">Tour</h2>
         <p class="text-white mt-3">ツアー販売</p>
         <div class="mt-4 text-center">
-          <p class="btn btn-primary">詳しくはこちら</p>
+          <p class="btn btn-primary">comming soon</p>
         </div>
       </a>
     </div>
@@ -63,7 +63,7 @@ get_header(); ?>
 
     <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
-      <a class="d-block text-center">
+      <a href="<?php echo $home ?>/product/" class="d-block text-center">
         <h2 class="ttl2 text-white">Product</h2>
         <p class="text-white mt-3">認証商品</p>
         <div class="mt-4 text-center">

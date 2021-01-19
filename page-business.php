@@ -25,14 +25,15 @@ get_header(); the_post(); ?>
         'taxonomy' => 'biz_cat',     //タクソノミー名を指定
         'term' => 'tc',           //タームのスラッグを指定
         'posts_per_page' => -1      ///表示件数（-1で全ての記事を表示）
-      ));
-      $id = get_the_ID();
-      $thumbnail = get_the_post_thumbnail_url($id, 'large');
+      ))
       ?>
       <?php if(have_posts()): ?>
-      <?php while(have_posts()):the_post(); ?>
+      <?php while(have_posts()):the_post();
+      $id = get_the_ID();
+      $thumbnail = get_the_post_thumbnail_url($id, 'large');
+      $permalink = get_the_permalink();?>
       <!-- ▼ ループするコンテンツ -->
-      <a hraf="<?php get_the_permalink(); ?>" class="business__service__item">
+      <a href="<?php echo $permalink ?>" class="business__service__item">
           <!-- ▼ アイキャッチ画像 -->
           <div class="business__service__item-img">
             <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
@@ -83,9 +84,12 @@ get_header(); the_post(); ?>
       $thumbnail = get_the_post_thumbnail_url($id, 'large');
       ?>
       <?php if(have_posts()): ?>
-      <?php while(have_posts()):the_post(); ?>
+      <?php while(have_posts()):the_post();
+      $id = get_the_ID();
+      $thumbnail = get_the_post_thumbnail_url($id, 'large');
+      $permalink = get_the_permalink();?>
       <!-- ▼ ループするコンテンツ -->
-      <a hraf="<?php get_the_permalink(); ?>" class="business__service__item">
+      <a href="<?php echo $permalink ?>" class="business__service__item">
           <!-- ▼ アイキャッチ画像 -->
           <div class="business__service__item-img">
             <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
@@ -122,7 +126,7 @@ get_header(); the_post(); ?>
 <section class="business__service w-90-sp">
   <div class="container">
     <div class="main-ttl">
-      <h2 class="text-secondary font-weight-bold pb-0">product<br class="d-block d-md-none"><span class="text-primary">指定管理運営事業</span></h2>
+      <h2 class="text-secondary font-weight-bold pb-0">product<br class="d-block d-md-none"><span class="text-primary">認証商品一覧</span></h2>
       <p class="d-block text-left lh-l pt-3 pb-4">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
     </div>
     <div class="d-flex justify-content-between flex-wrap">
@@ -134,9 +138,12 @@ get_header(); the_post(); ?>
       ));
       ?>
       <?php if(have_posts()): ?>
-      <?php while(have_posts()):the_post(); ?>
+      <?php while(have_posts()):the_post();
+      $id = get_the_ID();
+      $thumbnail = get_the_post_thumbnail_url($id, 'large');
+      $permalink = get_the_permalink();?>
       <!-- ▼ ループするコンテンツ -->
-      <a hraf="<?php get_the_permalink(); ?>" class="business__service__item">
+      <a href="<?php echo $permalink ?>" class="business__service__item">
           <!-- ▼ アイキャッチ画像 -->
           <div class="business__service__item-img">
             <?php if(has_post_thumbnail()):  // 画像がある場合 ?>

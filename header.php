@@ -9,6 +9,15 @@ $wp_url = get_template_directory_uri(); ?>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 <?php wp_head(); ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CG7PDVWLJN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CG7PDVWLJN');
+</script>
 </head>
 
 <body class="drawer drawer--left">
@@ -41,9 +50,9 @@ $wp_url = get_template_directory_uri(); ?>
       <li class="header__nav-item">
         <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>
       </li>
-      <li class="header__nav-item">
+      <!-- <li class="header__nav-item">
         <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/tour/">tour</a>
-      </li>
+      </li> -->
       <li class="header__nav-item">
         <a class="header__nav-link nav-link drawer-menu-item text-uppercase text-primary" href="<?php echo $home ?>/blog/">blog</a>
       </li>
@@ -163,6 +172,11 @@ news
 
           <h2 class="submv__ttl mincho f-28 text-white text-uppercase">BLOG</h2>
           <p class="submv__en text-white mb-0">ブログ</p>
+
+        <?php elseif ( is_archive('biz_item') || is_singular( 'biz_item' ) ): /* 事業詳細の場合 */ ?>
+
+          <h2 class="submv__ttl mincho f-28 text-white text-uppercase">BUSINESS</h2>
+          <p class="submv__en text-white mb-0">事業紹介</p>
 
         <?php elseif ( is_page('54') || is_archive() && is_category('news') || is_single() ): /* お知らせの場合 */ ?>
 
