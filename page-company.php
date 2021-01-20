@@ -9,15 +9,17 @@ get_header(); the_post(); ?>
     <div class="main-ttl mb-5">
       <h2 class="text-secondary font-weight-bold">message<span class="text-primary ml-4">代表からのメッセージ</span></h2>
     </div>
-    <h2 class="mt-5 mb-5">地域を繋ぐ<br>プラットフォームに</h2>
-    <p class="d-block text-left lh-l cc">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
-    <!-- ▼ 画像 -->
-    <div class="d-block d-md-flex mt-5">
-      <div class="col-12 col-md-4 m-0 p-0">
+    <div class="d-block d-flex align-items-center">
+      <div class="col-12 col-md-7">
+        <h2 class="mt-5 mb-5">地域を繋ぐ<br>プラットフォームに</h2>
+        <p class="d-block text-left lh-l">五條市地域商社株式会社は、五條市内に点在する魅力や課題を整理し、有機的に繋ぎ合わせるプラットフォームとして官民連携で地域に新たな魅力と価値を創造します。<br>五條市にある生産物、観光、人材などの魅力的な資源全てを取り扱い、商社としてPRし活性化を行うことで、稼げるまちづくりを実現していきます。</p>
+      </div>
+      <!-- ▼ 画像 -->
+      <div class="d-block d-md-flex col-12 col-md-5 mt-5">
         <img class="w-100" src="<?php echo $wp_url ?>/dist/images/company_msg_1.png" alt="五條市地域商社の写真" srcset="<?php echo $wp_url ?>/dist/images/company_msg_1.png 1x, <?php echo $wp_url ?>/dist/images/company_msg_1@2x.png 2x">
       </div>
+      <!-- ▲ 画像 -->
     </div>
-    <!-- ▲ 画像 -->
   </div>
 </section>
 <!-- ▲ メッセージ -->
