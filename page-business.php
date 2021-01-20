@@ -63,8 +63,7 @@ get_header(); the_post(); ?>
   <div class="container">
     <div class="main-ttl">
       <h2 class="text-secondary font-weight-bold pb-0">management<br class="d-block d-md-none"><span class="text-primary">指定管理運営事業</span></h2>
-      <p class="d-block text-left lh-l pt-3 pb-4">五條市から観光・宿泊・物販に関する以下の指定管理を受けて運営をしております。
-        <br>6時星の国、道の駅ヨシノジ大塔、おおとうきょうどかん、ふれあい交流館</p>
+      <p class="d-block text-left lh-l pt-3 pb-4">五條市から観光・宿泊・物販に関する以下の指定管理を受けて運営をしております。</p>
     </div>
     <div class="d-flex justify-content-between flex-wrap">
       <?php query_posts( array(
