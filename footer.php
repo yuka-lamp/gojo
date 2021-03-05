@@ -33,7 +33,7 @@ $wp_url = get_template_directory_uri(); ?>
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/concept/">concept</a>
           </li>
           <li class="d-inline ml-4">
-            <a class="text-uppercase text-primary" href="<?php echo $home ?>/service/">service</a>
+            <a class="text-uppercase text-primary" href="<?php echo $home ?>/business/">business</a>
           </li>
           <li class="d-inline ml-4">
             <a class="text-uppercase text-primary" href="<?php echo $home ?>/company/">company</a>

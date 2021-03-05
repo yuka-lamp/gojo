@@ -10,16 +10,16 @@ get_header(); the_post(); ?>
     <!-- ▼ ナビ -->
     <nav class="blog__nav nav nav-pills nav-fill pb-5">
       <a class="nav-item nav-link" href="<?php echo $home ?>/blog/">すべて</a>
-      <a class="nav-item nav-link <?php if(strcmp($term,'cat-1')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-1/">カテゴリ1
+      <a class="nav-item nav-link <?php if(strcmp($term,'leisure-gourmet')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/leisure-gourmet/">レジャー・グルメ
       </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
-      <a class="nav-item nav-link <?php if(strcmp($term,'cat-2')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-2/">
-        カテゴリ2
+      <a class="nav-item nav-link <?php if(strcmp($term,'product')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/product/">
+        特産品
       </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
-      <a class="nav-item nav-link <?php if(strcmp($term,'cat-3')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-3/">
-        カテゴリ3
+      <a class="nav-item nav-link <?php if(strcmp($term,'special')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/special/">
+        特集
       </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
-      <a class="nav-item nav-link <?php if(strcmp($term,'cat-4')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/cat-4/">
-        カテゴリ4
+      <a class="nav-item nav-link <?php if(strcmp($term,'tourism')==0){ echo "active"; } ?>" href="<?php echo $home ?>/blog_cat/tourism/">
+        観光
       </a><!-- 該当のカテゴリのみ'active'クラス付与 -->
     </nav>
     <!-- ▲ ナビ -->

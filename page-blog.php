@@ -9,10 +9,10 @@ get_header(); the_post(); ?>
 
     <nav class="blog__nav nav nav-pills nav-fill pb-5">
       <a class="nav-item nav-link active">すべて</a>
-      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/cat-1/">カテゴリ1</a>
-      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/cat-2/">カテゴリ2</a>
-      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/cat-3/">カテゴリ3</a>
-      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/cat-4/">カテゴリ4</a>
+      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/leisure-gourmet/">レジャー・グルメ</a>
+      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/product/">特産品</a>
+      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/special/">特集</a>
+      <a class="nav-item nav-link" href="<?php echo $home ?>/blog_cat/tourism/">観光</a>
     </nav>
 
     <!-- ▼ 一覧 -->
@@ -72,7 +72,7 @@ get_header(); the_post(); ?>
       }
       ?>
       <!-- ▲ ページネーション -->
-      
+
     </div>
     <!-- ▲ 一覧 -->
 

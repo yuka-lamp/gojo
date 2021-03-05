@@ -27,8 +27,8 @@ $wp_url = get_template_directory_uri(); ?>
 <header class="header">
   <h1 class="header__logo navbar-brand d-flex align-items-center">
     <a href="<?php echo $home ?>">
-      <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="五條市地域商社株式会社のロゴ">
-      <p class="d-lg-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</p>
+      <img src="<?php echo $wp_url ?>/dist/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+      <span class="d-lg-none d-inline-block font-weight-bold m-0 pl-2">五條市地域商社株式会社</span>
     </a>
   </h1>
   <button type="button" class="drawer-toggle drawer-hamburger">
