@@ -54,6 +54,15 @@
       color: $secondary;
       border: 1px solid $secondary;
       font-size: 0.9375rem;
+      @include media-breakpoint-down(md) {
+        width: 50%;
+      }
+
+      &:first-child() {
+        @include media-breakpoint-down(md) {
+        width: 100%;
+        }
+      }
 
       &.active {
         color: $white;

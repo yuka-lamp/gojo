@@ -65,13 +65,21 @@ get_header(); the_post(); ?>
 
       <?php endforeach; wp_reset_postdata(); ?>
 
-      <!-- ▼ ページネーション -->
-      <?php
-      if (function_exists('wp_pagenavi')) {
-      wp_pagenavi(['query' => $wp_query]);
-      }
-      ?>
-      <!-- ▲ ページネーション -->
+      <?php if (empty($my_posts)):?>
+
+      <p class="d-block text-center w-100 py-5 my-5">まだ記事が投稿されていません</p>
+
+      <?php else :  // 記事が投稿されていない場合?>
+
+        <!-- ▼ ページネーション -->
+        <?php
+        if (function_exists('wp_pagenavi')) {
+        wp_pagenavi(['query' => $wp_query]);
+        }
+        ?>
+        <!-- ▲ ページネーション -->
+
+      <?php endif; ?>
 
     </div>
     <!-- ▲ 一覧 -->

@@ -4,9 +4,9 @@ $wp_url = get_template_directory_uri();
 get_header(); ?>
 
 <!-- ▼ クーポン券 -->
-<div class="text-center pl-5 pr-5 mb-4">
+<!-- <div class="text-center pl-5 pr-5 mb-4">
   <a class="border border-success py-3 d-block text-center text-decoration-underline text-secondary" href="<?php echo $wp_url ?>/dist/images/coupon.pdf" target="_blank">五條市お店応援クーポン券<br class="d-block d-md-none">参加店リストについてはこちら<i class="fas fa-external-link-alt ml-3"></i></a>
-</div>
+</div> -->
 <!-- ▲ クーポン券 -->
 
 <!-- ▼ 導入 -->
@@ -63,7 +63,7 @@ get_header(); ?>
 
     <!-- ▼ リンク -->
     <div class="top__links-item pl-0 pr-0">
-      <a href="<?php echo $home ?>/product/" class="d-block text-center">
+      <a href="<?php echo $home ?>/business#biz_item" class="d-block text-center">
         <h2 class="ttl2 text-white">Product</h2>
         <p class="text-white mt-3">認証商品</p>
         <div class="mt-4 text-center">
@@ -100,7 +100,10 @@ get_header(); ?>
       <div class="main-ttl">
         <h2 class="text-secondary font-weight-bold">Gojo blog<span class="text-primary ml-4">五條市ブログ</span></h2>
       </div>
-      <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/"><img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">一覧をみる</a>
+      <a class="d-md-block d-none font-weight-bold" href="<?php echo $home; ?>/blog/">
+        <img class="mr-3" src="<?php echo $wp_url ?>/dist/images/btn_icon.png" alt="フッター背景" srcset="<?php echo $wp_url ?>/dist/images/btn_icon.png 1x, <?php echo $wp_url ?>/dist/images/btn_icon@2x.png 2x">
+        一覧をみる
+      </a>
     </div>
   </div>
   <!-- ▲ タイトル + 説明文 -->
@@ -108,60 +111,68 @@ get_header(); ?>
   <div class="container">
     <!-- ▼ スライドショー -->
     <div class="slick-blog blog__wrap">
-      <?php
-      $args = [
-          'posts_per_page' => 6,
-          'post_type' => 'gojo-blog',
-          'orderby' => 'date',
-          'order' => 'ASC',
-      ];
-      $my_posts = get_posts($args);
-      foreach ($my_posts as $post):
-      setup_postdata($post);
-      $id = get_the_ID();
-      $ttl = get_the_title();
-      $thumbnail = get_the_post_thumbnail_url($id, 'large');
-      $permalink = get_the_permalink();
-      $date = get_the_date();
-      ?>
+        <?php
+        $args = [
+            'posts_per_page' => 6,
+            'post_type' => 'gojo-blog',
+            'orderby' => 'date',
+            'order' => 'ASC',
+        ];
+        $my_posts = get_posts($args);
+        foreach ($my_posts as $post):
+        setup_postdata($post);
+        $id = get_the_ID();
+        $ttl = get_the_title();
+        $thumbnail = get_the_post_thumbnail_url($id, 'large');
+        $permalink = get_the_permalink();
+        $date = get_the_date();
+        ?>
 
-      <!-- ▼ ループするコンテンツ -->
-      <div>
-      <a href="<?php echo $permalink ?>" class="blog__item d-block">
-        <div class="blog__item__img">
-          <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
-            <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
-          <?php else: // 画像がない場合 ?>
-            <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
-          <?php endif; ?>
+        <!-- ▼ ループするコンテンツ -->
+        <div>
+          <a href="<?php echo $permalink ?>" class="blog__item d-block">
+            <div class="blog__item__img">
+              <?php if( has_post_thumbnail() ):  // 画像がある場合 ?>
+                <img class="w-100" src="<?php echo $thumbnail; ?>" alt="<?php echo $ttl ?>">
+              <?php else: // 画像がない場合 ?>
+                <img class="w-100" src="<?php echo $wp_url ?>/dist/images/imgnone.png" alt="<?php the_title(); ?>" srcset="<?php echo $wp_url ?>/dist/images/imgnone.png 1x, <?php echo $wp_url ?>/dist/images/imgnone@2x.png 2x">
+              <?php endif; ?>
+            </div>
+            <div class="blog__item__txt">
+              <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
+              <p class="d-inline blog__item__txt-info">
+                <span class="blog__item__txt-cat">
+                  <?php if ($terms = get_the_terms($post->ID, 'blog_cat')) {
+                      foreach ( $terms as $term ) {
+                        echo esc_html($term->name);
+                      }
+                    }
+                 ?>
+                </span>
+                <?php echo $date ?>
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="blog__item__txt">
-          <h3 class="f-15 d-block font-weight-bold mt-4 mb-3" hraf="<?php echo $permalink ?>"><?php echo $ttl ?></h3>
-          <p class="d-inline blog__item__txt-info">
-            <span class="blog__item__txt-cat">
-              <?php if ($terms = get_the_terms($post->ID, 'blog_cat')) {
-                  foreach ( $terms as $term ) {
-                    echo esc_html($term->name);
-                  }
-                }
-             ?>
-            </span>
-            <?php echo $date ?>
-          </p>
-        </div>
-      </a>
-      </div>
-      <!-- ▲ ループするコンテンツ -->
+        <!-- ▲ ループするコンテンツ -->
 
       <?php endforeach; wp_reset_postdata(); ?>
     </div>
     <!-- ▲ スライドショー -->
 
-    <!-- ▼ read more -->
-    <div class="text-center">
-      <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
-    </div>
-    <!-- ▲ read more -->
+    <?php if (empty($my_posts)):?>
+
+    <p class="d-block text-center w-100 py-5 my-5">まだ記事が投稿されていません</p>
+
+    <?php else :  // 記事が投稿されていない場合?>
+
+      <!-- ▼ read more -->
+      <div class="text-center">
+        <a href="<?php echo $home ?>/blog/" class="d-md-none btn btn-primary-b mt-5">詳しくはこちら</a>
+      </div>
+      <!-- ▲ read more -->
+
+    <?php endif; ?>
 
   </div>
 </section>

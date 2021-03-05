@@ -115,7 +115,7 @@ get_header(); the_post(); ?>
 <!-- ▲ 指定管理運営事業 -->
 
 <!-- ▼ 認証商品一覧 -->
-<section class="business__service w-90-sp">
+<section id="biz_item" class="business__service w-90-sp">
   <div class="container">
     <div class="main-ttl">
       <h2 class="text-secondary font-weight-bold pb-0">product<br class="d-block d-md-none"><span class="text-primary">認証商品一覧</span></h2>

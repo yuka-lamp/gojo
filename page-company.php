@@ -9,7 +9,7 @@ get_header(); the_post(); ?>
     <div class="main-ttl mb-5">
       <h2 class="text-secondary font-weight-bold">message<span class="text-primary ml-4">代表からのメッセージ</span></h2>
     </div>
-    <div class="d-block d-flex align-items-center">
+    <div class="d-md-flex d-block align-items-center">
       <div class="col-12 col-md-7">
         <h2 class="mt-5 mb-5">地域の魅力を次世代に引き継ぐ</h2>
         <p class="d-block text-left lh-l">
